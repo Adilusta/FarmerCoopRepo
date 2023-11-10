@@ -1,0 +1,83 @@
+/*
+Template Name:agricultural
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+
+
+
+/********************* gallery_main ****************/
+#gallery_main{ 
+ background-image: url(../img/93.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ }
+.gallery_main_3{ 
+ padding-top:150px;
+ padding-bottom:150px;
+ background-color: rgb(31 43 59 / 56%);
+ }
+.gallery_main_2 ul{ 
+ text-align:right;
+ padding-top:15px;
+ }
+.gallery_main_2 li{ 
+ display: inline;
+ padding-right: 10px;
+ color: #fff;
+ font-size: 20px;
+ }
+.gallery_main_2 h2{ 
+ color:#fff;
+ }
+/********************* gallery_main_end ****************/
+/********************* gallery ****************/
+#gallery{ 
+ padding-top:50px;
+ padding-bottom:50px;
+ }
+.gallery_5{ 
+ text-align:center;
+ padding-top: 30px;
+ }
+/********************* gallery_end ****************/
+
+
+
+
+
+
+
+@media screen and (max-width : 767px){
+.gallery_main_3 {
+ padding-top: 50px;
+ padding-bottom: 50px;
+}
+#gallery_main {
+ background-attachment: inherit;
+ text-align: center;
+}
+.gallery_main_2 ul {
+ text-align: center;
+}
+}
+
+@media (min-width:470px) and (max-width:767px) { 
+
+}
+ 
+@media (min-width:768px) and (max-width:960px) { 
+
+} 
+
+ 
+@media (min-width:961px) and (max-width:1200px) {
+
+}
+
+@media (min-width:1201px) and (max-width:1320px) {
+
+}

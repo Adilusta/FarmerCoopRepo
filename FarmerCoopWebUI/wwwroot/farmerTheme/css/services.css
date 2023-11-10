@@ -1,0 +1,281 @@
+/*
+Template Name:agricultural
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+
+
+
+/********************* services_main ****************/
+#services_main{ 
+ background-image: url(../img/38.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ }
+.services_main_3{ 
+ padding-top:150px;
+ padding-bottom:150px;
+ background-color: rgb(31 43 59 / 56%);
+ }
+.services_main_2 ul{ 
+ text-align:right;
+ padding-top:15px;
+ }
+.services_main_2 li{ 
+ display: inline;
+ padding-right: 10px;
+ color: #fff;
+ font-size: 20px;
+ }
+.services_main_2 h2{ 
+ color:#fff;
+ }
+/********************* services_main_end ****************/
+/********************* services ****************/
+#services{ 
+ padding-top:30px;
+ padding-bottom:50px;
+ }
+.services_1{ 
+ text-align:center;
+ }
+.services_1 h3{ 
+ padding-bottom:10px;
+ }
+.services_1 h2{ 
+ padding-bottom:40px;
+ }
+.services_1 h2 a{ 
+ color: #77b81e;
+ }
+.services_3{ 
+ text-align: center;
+ box-shadow: 0 0 1px black;
+ padding: 10px 10px 30px 10px;
+ }
+.services_3 i{ 
+ font-size:50px;
+ padding-top:10px;
+ padding-bottom:10px;
+ color: #77b81e;
+ }
+.services_3 h3{ 
+ padding-bottom:6px;
+ color: #77b81e;
+ }
+.services_3 p{ 
+ padding-bottom:20px;
+ }
+/********************* services_end ****************/
+/********************* farms ****************/
+#farms{ 
+ padding-top:30px;
+ padding-bottom:30px;
+ background-color:#303B4A;
+ }
+.farms_2{ 
+ text-align:center;
+ }
+.farms_2 i{ 
+ font-size: 50px;
+ color: #77b81e;
+ }
+.farms_2 h2{ 
+ padding-top:3px;
+ padding-bottom:3px;
+ color:#fff;
+ }
+.farms_2 p{ 
+ padding-bottom:0px;
+ color:#fff;
+ }
+/********************* farms_end ****************/
+/********************* natural ****************/
+.natural_3 h3{ 
+ padding-bottom:5px;
+ padding-top:20px;
+ }
+.natural_3 h2{ 
+ padding-bottom:10px;
+ color: #77b81e;
+ }
+.natural_5 i{ 
+ font-size:55px;
+ color: #77b81e;
+ }
+/********************* natural_end ****************/
+/********************* place ****************/
+#place{ 
+ background-image: url(../img/19.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ }
+.place_main{ 
+ padding-top:100px;
+ padding-bottom:250px;
+ background-color: #0000009e;
+ }
+.place_1{ 
+ text-align:center;
+ }
+.place_1 h4{ 
+ color:#fff;
+ padding-bottom:10px;
+ }
+.place_1 h2{ 
+ color:#fff;
+ }
+.place_1 p{ 
+ color:#fff;
+ padding-bottom:30px;
+ }
+/********************* place_end ****************/
+/********************* request ****************/
+#request{ 
+ padding-bottom:50px;
+ margin-top:-140px;
+ }
+.request_3{ 
+ text-align: center;
+ background-color: #77b81e;
+ box-shadow: 13px 9px 3px 4px #4d8401;
+ padding: 0px 0px 15px 0px;
+ }
+.request_3 h3{ 
+ padding-top:10px;
+ font-weight:bold;
+ color: #fff;
+ }
+.request_3 p{ 
+ padding:0px;
+ margin:0px;
+ padding-bottom: 10px;
+ padding-top: 5px;
+ color: #ffffff;
+ }
+.request_3 li{ 
+ display:inline;
+ padding-right:10px;
+ }
+.request_3 li a{ 
+ font-size:18px;
+ color:#000;
+ }
+.request_3 li a:hover{ 
+ color:#fff;
+ }
+/********************* request_end ****************/
+
+
+
+
+
+@media screen and (max-width : 767px){
+.services_main_3 {
+ padding-top: 50px;
+ padding-bottom: 50px;
+}
+#services_main {
+ background-attachment: inherit;
+ text-align: center;
+}
+.services_main_2 ul {
+ text-align: center;
+}
+.services_1 h2 {
+ font-size: 40px;
+}
+.services_3 {
+ margin-bottom: 10px;
+}
+#services {
+ padding-top: 20px;
+ padding-bottom: 20px;
+ text-align: center;
+}
+#natural{ 
+ text-align: center;
+}
+.place_main {
+ padding-top: 30px;
+ padding-bottom: 40px;
+}
+#request {
+ padding-bottom: 20px;
+ margin-top: 20px;
+ text-align: center;
+}
+.request_3 {
+ margin-bottom: 16px;
+}
+}
+
+@media (min-width:470px) and (max-width:767px) { 
+
+}
+ 
+@media (min-width:768px) and (max-width:960px) { 
+.services_3 i {
+ font-size: 30px;
+}
+.services_3 h3 {
+ font-size: 24px;
+}
+.button_1 {
+ padding: 13px 18px 13px 18px;
+}
+.natural_3 h2 {
+ padding-bottom: 5px;
+ font-size: 30px;
+}
+.natural_3 p {
+ font-size:15px;
+}
+.natural_5 i {
+ font-size: 35px;
+}
+.natural_6 h3 {
+ font-size:20px;
+}
+.natural_6 p {
+ font-size: 15px;
+ padding-bottom: 0px;
+}
+} 
+
+ 
+@media (min-width:961px) and (max-width:1200px) {
+.services_3 i {
+ font-size: 30px;
+}
+.services_3 h3 {
+ font-size: 24px;
+}
+.button_1 {
+ padding: 13px 18px 13px 18px;
+}
+.natural_3 h2 {
+ padding-bottom: 5px;
+ font-size: 30px;
+}
+.natural_3 p {
+ font-size:15px;
+}
+.natural_5 i {
+ font-size: 35px;
+}
+.natural_6 h3 {
+ font-size:20px;
+}
+.natural_6 p {
+ font-size: 15px;
+ padding-bottom: 0px;
+}
+}
+
+@media (min-width:1201px) and (max-width:1320px) {
+
+}

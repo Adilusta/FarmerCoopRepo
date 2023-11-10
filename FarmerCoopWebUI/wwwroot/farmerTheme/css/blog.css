@@ -1,0 +1,243 @@
+/*
+Template Name:agricultural
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+
+
+
+/********************* blog_main ****************/
+#blog_main{ 
+ background-image: url(../img/72.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ }
+.blog_main_3{ 
+ padding-top:150px;
+ padding-bottom:150px;
+ background-color: rgb(31 43 59 / 56%);
+ }
+.blog_main_2 ul{ 
+ text-align:right;
+ padding-top:15px;
+ }
+.blog_main_2 li{ 
+ display: inline;
+ padding-right: 10px;
+ color: #fff;
+ font-size: 20px;
+ }
+.blog_main_2 h2{ 
+ color:#fff;
+ }
+/********************* blog_main_end ****************/
+/********************* property ****************/
+#property{ 
+ padding-top:30px;
+ padding-bottom: 35px;
+ background-color:#f1f1f1;
+  }
+.blog_home1ii h4 a{ 
+ color:#000;
+ }
+.blog_home1i ul{
+ margin-top: 10px;
+ border-bottom: 1px solid #e0dcdc;
+ border-top: 1px solid #e0dcdc;
+ padding-top: 9px;
+ padding-bottom: 7px;
+  }
+.blog_home1i ul li{
+display:inline-block;
+padding-left:5px;
+padding-right:5px;
+color:#999;
+font-size:14px;
+  }
+.blog_home1i ul li a{
+ color: #797878;
+  }
+.blog_home1i ul li i{
+ margin-right:5px; 
+ color: #77b81e;
+  }
+.blog_home1i p a{
+ color: #000;
+ font-weight:bold;
+  }
+.blog_home1i p a:hover{
+  color:#77b81e;
+  }
+.blog_home1i p{
+ color:#666;
+ padding-top: 10px;
+  }
+.blog_home1ii{
+background:#fff;
+padding: 20px 15px 6px 15px;
+border-bottom: 3px solid #050380;
+margin-bottom:25px;
+  }
+.blog_home1il h6 span{
+ display:block; 
+  }
+.blog_home1il h6{
+ font-size: 16px;
+ color: #fff;
+  }
+.date{
+ background:#77b81e;
+ padding: 9px 0px;
+ width: 19%;
+ text-align: center;
+  }
+.year{
+ background: #fff;
+ padding: 9px 0px;
+ width: 19%;
+ text-align: center; 
+ color:#000;
+  }
+.blog_home1il{
+ position: absolute;
+ width: 100%;
+ top: 33%;
+ left: 8%;
+  }
+.blog_home1i{
+ position:relative; 
+  }
+.property_3 p{ 
+ padding-top:20px;
+ padding-bottom:20px;
+ }
+.property_main ul{ 
+ padding-top:27px;
+ text-align:center;
+ }
+.property_main li{ 
+ display:inline;
+ margin-right:10px;
+ }
+.well_1{ 
+ border: 1px solid #77b81e;
+ background-color: #77b81e;
+ color: #fff;
+ padding: 10px 15px 10px 15px;
+ }
+.well_2 a{ 
+ border: 1px solid #000;
+ color: #000;
+ padding: 10px 15px 10px 15px;
+ font-weight:bold;
+ }
+.well_2 a:hover{ 
+ border: 1px solid #77b81e;
+ color: #fff;
+ background-color: #77b81e;
+ }
+/********************* property_end ****************/
+
+
+
+
+
+
+
+@media screen and (max-width : 767px){
+.blog_main_3 {
+ padding-top: 50px;
+ padding-bottom: 50px;
+}
+#blog_main { 
+ background-attachment: inherit;
+ text-align: center;
+}
+.blog_main_2 ul {
+ text-align: center;
+}
+.blog_home1il {
+ position: static;
+ margin-bottom: 10px;
+}
+.blog_home1il h6 span {
+ display: none;
+}
+.blog_home1ii {
+ margin-bottom: 0px;
+}
+.date {
+ width: 100%;
+}
+.year {
+ width: 100%;
+}
+#property {
+ text-align: center;
+}
+.blog_home1i ul li {
+ padding-left: 3px;
+ padding-right: 3px;
+ font-size: 12px;
+}
+}
+
+@media (min-width:470px) and (max-width:767px) { 
+
+}
+ 
+@media (min-width:768px) and (max-width:960px) { 
+.blog_home1il {
+ top: 10%;
+}
+.blog_home1ii h4 a {
+ font-size: 20px;
+}
+.blog_home1ii h4{ 
+ font-size: 20px;
+}
+.blog_home1i ul li {
+ padding-left: 0px;
+ padding-right: 0px;
+ font-size: 14px;
+}
+.blog_home1i ul li i {
+ margin-right: 1px;
+ font-size: 10px;
+}
+.blog_home1i ul li a {
+ font-size: 10px;
+}
+} 
+
+ 
+@media (min-width:961px) and (max-width:1200px) {
+.blog_home1il {
+ top: 10%;
+}
+.blog_home1ii h4 a {
+ font-size: 20px;
+}
+.blog_home1ii h4{ 
+ font-size: 20px;
+}
+.blog_home1i ul li {
+ padding-left: 0px;
+ padding-right: 0px;
+ font-size: 14px;
+}
+.blog_home1i ul li i {
+ margin-right: 1px;
+ font-size: 10px;
+}
+.blog_home1i ul li a {
+ font-size: 10px;
+}
+}
+
+@media (min-width:1201px) and (max-width:1320px) {
+
+}

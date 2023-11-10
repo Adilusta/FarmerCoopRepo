@@ -1,0 +1,223 @@
+/*
+Template Name:agricultural
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+
+
+
+/********************* about_main ****************/
+#about_main{ 
+ background-image: url(../img/32.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ }
+.about_main_3{ 
+ padding-top:150px;
+ padding-bottom:150px;
+ background-color: rgb(31 43 59 / 56%);
+ }
+.about_main_2 ul{ 
+ text-align:right;
+ padding-top:15px;
+ }
+.about_main_2 li{ 
+ display: inline;
+ padding-right: 10px;
+ color: #fff;
+ font-size: 20px;
+ }
+.about_main_2 h2{ 
+ color:#fff;
+ }
+/********************* about_main_end ****************/
+/********************* about ****************/
+#about{ 
+ padding-top:30px;
+ padding-bottom:50px;
+ }
+.about_1{ 
+ text-align:center;
+ }
+.about_1 h3 {
+ padding-bottom: 10px;
+}
+.about_1 h2 {
+ padding-bottom:30px;
+}
+.about_1 h2 a {
+ color: #77b81e;
+}
+.about_3 h3{ 
+ padding-top:10px;
+ color: #77b81e;
+ }
+.about_3 img:hover{ 
+ box-shadow: 0 0 8px 3px black;
+ }
+/********************* about_end ****************/
+/********************* erosion ****************/
+#erosion{ 
+ background-color:#f1f1f1;
+}
+.erosion_3{ 
+ text-align:center;
+ padding:18px;
+ }
+.erosion_3 h3{ 
+ color: #77b81e;
+ padding-top: 20px;
+ padding-bottom: 20px;
+ font-weight: bold;
+ letter-spacing: 2px;
+}
+.erosion_3 p{ 
+ padding-bottom: 20px;
+}
+/********************* erosion_end ****************/
+/********************* product ****************/
+#product{ 
+ padding-top:30px;
+ padding-bottom:50px;
+ }
+.product_1{ 
+ text-align:center;
+ }
+.product_1 h2{ 
+ padding-bottom:60px;
+ }
+.product_1 h2 a{ 
+ color: #77b81e;
+ }
+.product_3 i{ 
+ margin-right: 10px;
+ border: 2px solid #77b81e;
+ background-color: #77b81e;
+ padding: 14px 22px 14px 22px;
+ color:#fff;
+}
+.product_3 p{ 
+ padding-top:20px;
+ padding-bottom:20px;
+}
+.product_3 a{ 
+ color: #77b81e;
+}
+.product_3 h3{ 
+ border-bottom: 1px solid #dad9d9;
+ padding-bottom: 16px;
+ width:78%;
+}
+/********************* product_end ****************/
+
+
+
+
+@media screen and (max-width : 767px){
+.about_main_3 {
+ padding-top: 30px;
+ padding-bottom: 30px;
+}
+#about_main {
+ background-attachment: inherit;
+ text-align: center;
+}
+.about_main_2 ul {
+ text-align: center;
+}
+#about {
+ padding-bottom:0px;
+ text-align: center;
+}
+.about_3{ 
+ padding-bottom:27px;
+}
+#erosion {
+ text-align: center;
+}
+.erosion_3 {
+ margin-bottom: 18px;
+}
+#product {
+ padding-top: 20px;
+ padding-bottom:0px;
+ text-align: center;
+}
+.product_3 i {
+ margin-right:5px;
+ padding: 10px 12px 10px 12px;
+}
+.product_3 h3 {
+ width: 100%;
+}
+.product_1 h2 {
+ padding-bottom: 30px;
+}
+.product_3{ 
+ padding-bottom:50px; 
+}
+}
+
+@media (min-width:470px) and (max-width:767px) { 
+
+}
+ 
+@media (min-width:768px) and (max-width:960px) { 
+.about_main_2 ul {
+ padding-top:8px;
+}
+.erosion_3 h3 {
+ padding-top: 0px;
+ padding-bottom: 3px;
+ letter-spacing: 0px;
+ font-size: 18px;
+}
+.button_1 {
+ font-size: 18px;
+ padding: 10px 18px 10px 18px;
+}
+.erosion_3 p {
+ padding-bottom: 5px;
+ font-size: 15px;
+}
+.product_3 a {
+ font-size: 15px;
+}
+.product_3 p {
+ font-size: 14px;
+}
+} 
+
+ 
+@media (min-width:961px) and (max-width:1200px) {
+.about_main_2 ul {
+ padding-top:8px;
+}
+.erosion_3 h3 {
+ padding-top: 0px;
+ padding-bottom: 3px;
+ letter-spacing: 0px;
+ font-size: 18px;
+}
+.button_1 {
+ font-size: 18px;
+ padding: 10px 18px 10px 18px;
+}
+.erosion_3 p {
+ padding-bottom: 5px;
+ font-size: 15px;
+}
+.product_3 a {
+ font-size: 15px;
+}
+.product_3 p {
+ font-size: 14px;
+}
+}
+
+@media (min-width:1201px) and (max-width:1320px) {
+
+}
