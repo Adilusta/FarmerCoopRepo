@@ -6,10 +6,133 @@
 <!DOCTYPE html>
 
 <html>
-<head>
+	  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BİZİM ÇİFTLİK</title>
+	<link rel="icon" href="~/farmerTheme/img/svg.png" type="image/x-icon">
+    <link href="~/farmerTheme/css/bootstrap.min.css" rel="stylesheet">
+	<link href="~/farmerTheme/css/global.css" rel="stylesheet">
+	<link href="~/farmerTheme/css/index.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="~/farmerTheme/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+	<link href="~/farmerTheme/css/ken-burns.css" rel="stylesheet" type="text/css" media="all" />
+	<link type="text/css" rel="stylesheet" href="~/farmerTheme/css/animate.css">
+   <script src="~/farmerTheme/js/jquery-2.1.1.min.js"></script>
+    <script src="~/farmerTheme/js/bootstrap.min.js"></script>
+  </head>
+@*<head>
     <meta name="viewport" content="width=device-width" />
     <title>_HomeLayout</title>
-</head>
+</head>*@
 <body>
+    <section id="header_main">
+ <div class="container">
+  <div class="row">
+   <div class="col-sm-12 space_all">
+	<div class="col-sm-3 space_all">
+	 <div class="header_main_1">
+	  <a href="~/farmerTheme/index.html"><i class="fa fa-tree"></i>BİZİM ÇİFTLİK</a>
+	 </div>
+	</div>
+	<div class="col-sm-9 space_all">
+		<div>
+			<div class="header_main_4">
+				<a href="/Register/Index/"><i class="fa fa-sign-in"></i> KAYIT OL!</a>
+			</div>
+		</div>
+		<div >
+			<div class="header_main_4">
+				<a href="/Login/Index/"><i class="fa fa-user"></i> GİRİŞ YAP!</a>
+			</div>
+		</div>		
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+
+<section id="header" class="cd-secondary-nav" class="clearfix">
+ <nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+   
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="dropdown-thumbnail-preview">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="~/farmerTheme/index.html">Ana Sayfa</a></li>
+		<li><a href="~/farmerTheme/about.html">Hakkımızda</a></li>
+        <li><a href="~/farmerTheme/shop.html">Alışveriş</a></li>
+		<li><a href="~/farmerTheme/blog.html">Akış</a></li>
+		<li><a href="~/farmerTheme/contact.html">İletişim</a></li>
+		
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav> 
+</section>
+    @RenderBody()
+	<section id="footer">
+ <div class="footer_inner clearfix">
+   <div class="container">
+  <div class="row">
+   <div class="col-sm-12">
+    <div class="col-sm-3">
+	 <div class="footer_1">
+	  <h3>Bir Doğa Destanı</h3>
+	  <p>Tüm çiftçilerimiz toprak anadan mis gibi ürünleri çıkartarak aslında birer birer destan yazıyorlar. Artık biz de bu destana ortak oluyoruz.Bize katılın.</p>
+	 </div>
+	</div>
+	<div class="col-sm-3">
+	 <div class="footer_2">
+	  <h3>İletişim Bilgilerimiz</h3>
+	  <ul>
+	      <li><i class="fa fa-map-marker"></i> İstanbul</li>
+		  <li><i class="fa fa-phone"></i> Phone:0536 666 6666</li>
+		  <li><i class="fa fa-envelope"></i> <a href="#">bizimciftlik@gmail.com</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="col-sm-3">
+	 <div class="footer_3">
+	  <h3>Sosyal Medya Hesaplarımız</h3>
+	  <ul>
+           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+           <li><a href="#"><i class="fa fa-twitter"></i></a></li> 
+           <li><a href="#"><i class="fa fa-google-plus"></i></a></li> 
+           <li><a href="#"><i class="fa fa-instagram"></i></a></li> 
+           		   
+	  </ul>
+	 </div>
+	</div>
+	<div class="col-sm-3">
+	 <div class="footer_2">
+	  <h3>Aramıza Katılın</h3>
+	 </div>
+	 <div class="footer_4">
+	  <p>Henüz hesabınız yok mu? Kayıt olun.</p>
+	 </div>
+	 <div class="footer_3">
+	  <!-- <p><input type="text" class="form-control" placeholder="Your Email Address"></p> -->
+	  <a href="#" class="button">KAYIT OL</a>
+	 </div>	 
+	</div>
+   </div>
+  </div>
+ </div>
+ </div>
+</section>
+
+
+<section id="footer_main" class="clearfix">
+ <div class="col-sm-12">
+   <div class="footer_main_1">
+    <p>© 2023 Bizim Çiftlik Tüm Hakları Saklıdır</a></p>
+   </div>
+ </div>
+</section>
 </body>
 </html>

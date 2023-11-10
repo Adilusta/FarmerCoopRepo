@@ -4,5 +4,191 @@
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
 
-<h1>Index</h1>
+<!DOCTYPE html>
+<html lang="en">
 
+<body>	
+	@*@await Html.PartialAsync("SliderPartial")*@
+	@await Html.PartialAsync("~/Views/Shared/Partials/SliderPartial.cshtml")
+
+
+	@await Html.PartialAsync("~/Views/Shared/Partials/IntroductionPartial.cshtml")
+
+
+
+@await Component.InvokeAsync("LastThreePosts")
+
+	@*İLETİŞİM KISMI BAŞLANGIÇ*@
+<section id="people" class="clearfix">
+ <div class="people_1 clearfix">  
+  <div class="col-sm-6 space_all">
+   <div class="people_main_1 clearfix">
+    <div class="people_4">
+    <h4>Call Back</h4>
+	<h2><a href="#">Donation</a> Request</h2>
+	<p>consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore edolore magna aliquyam erat,</p>
+    </div>
+	<div class="people_5 clearfix">
+	 <div class="col-sm-6 space_all">
+	  <div class="people_6">
+	   <input type="text" class="form-control" placeholder="Value">
+	  </div>
+	 </div>
+	 <div class="col-sm-6 space_all">
+	  <div class="people_6">
+	   <input type="text" class="form-control" placeholder="Email">
+	  </div>
+	 </div>
+	</div> 
+	<div class="people_5 clearfix">
+	 <div class="col-sm-6 space_all">
+	  <div class="people_6">
+	   <input type="text" class="form-control" placeholder="Full Name">
+	  </div>
+	 </div>
+	 <div class="col-sm-6 space_all">
+	  <div class="people_6">
+	   <input type="text" class="form-control" placeholder="Phone">
+	  </div>
+	 </div>
+	</div>
+	<div class="people_7 clearfix">
+	  <div class="people_8">
+	   <textarea placeholder="Message" class="form-control"></textarea>
+	  </div>
+	</div>
+	<div class="people_9 clearfix">
+	  <div class="people_10">
+	   <a href="#" class="button_1">READ MORE</a>
+	  </div>
+	</div>
+   </div>   
+  </div>
+  <div class="col-sm-6 space_all">
+   <div class="people_main clearfix">
+    <div class="people_2">
+    <a href="#"><img src="~/farmerTheme/img/telephone.png" alt="abc" class="img_responsive1"></a>
+   </div>
+   </div>   
+  </div>
+ </div>
+</section>
+	@*İLETİŞİM KISMI BİTİŞ*@
+
+<section id="place">
+ <div class="place_main clearfix">
+  <div class="container">
+   <div class="row">
+    <div class="place_1">
+     <h4>Geliştirici Takımımız</h4>
+	 <h2>Geliştirici Takımımız</h2>
+	 <p>Dört lisans öğrenciden oluşan geliştirici takımımız her türlü görüş,öneri ve fikirlerinize açıktır.</p>
+	 <!-- <a href="#" class="button_1">READ MORE</a> -->
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+
+@*<section id="request">
+ <div class="container">
+  <div class="row">
+   <div class="request_1 clearfix">
+    <div class="col-sm-3">
+	 <div class="request_2">
+	  <a href="#"><img src="~/farmerTheme/img/15.jpg" alt="abc" class="img_responsive"></a>
+	 </div>
+	 <div class="request_3">
+	  <h3>Adil Usta</h3>
+	  <p>The Master of .Net</p>
+	  <ul>
+	       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+		   <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		   <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="col-sm-3">
+	 <div class="request_2">
+	  <a href="#"><img src="~/farmerTheme/img/16.jpg" alt="abc" class="img_responsive"></a>
+	 </div>
+	 <div class="request_3">
+	  <h3>Feyza Çakmak</h3>
+	  <p>Demir Leydi</p>
+	  <ul>
+	       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+		   <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		   <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="col-sm-3">
+	 <div class="request_2">
+	  <a href="#"><img src="~/farmerTheme/img/17.jpg" alt="abc" class="img_responsive"></a>
+	 </div>
+	 <div class="request_3">
+	  <h3>Halil Ateş</h3>
+	  <p>Toprağa Hükmeden Konyalı</p>
+	  <ul>
+	       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+		   <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		   <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="col-sm-3">
+	 <div class="request_2">
+	  <a href="#"><img src="~/farmerTheme/img/18.jpg" alt="abc" class="img_responsive"></a>
+	 </div>
+	 <div class="request_3">
+	  <h3>Ali Öztürk</h3> 
+	  <p>Son Zurna Bükücü</p>
+	  <ul>
+	       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+		   <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		   <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+	  </ul>
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>*@
+
+
+<section id="testimonials">
+	<div>
+ <div class="testimonials_1 clearfix">
+  <div class="col-sm-6 space_all">
+   <div class="testimonials_2">
+	 <a href="#"><img src="~/farmerTheme/img/23.jpg" alt="abc" class="img_responsive"></a> 
+   </div>
+  </div>
+  <div class="col-sm-6 space_all">
+   <div class="testimonials_main clearfix">
+    <div class="testimonials_3">
+	  <h2><a href="#">Biz kimiz? Neyi amaçlıyoruz?</h2> 
+	 <p>Ülkemizde tarım önemli bir alan olmasına rağmen maalesef ki çiftçilerimiz ürünlerini ederinden çok daha ucuz fiyata satmak zorunda kalıyorlar.Ayrıca mahsüller için uzun bir süre emek harcıyorlar ve bu süre boyunca bir çok sorunla karşılaşıyorlar.Bazılarını çözebiliyorlar fakat bazılarını da çözemiyorlar.Bizim amacımız çiftçilerimiz birbirleriyle dayanışma ve yardımlaşma içerisinde olması ve birbirlerine yardım ederek karşılaştıkları sorunların kolayca üstesinden gelebilmeleri. Ayrıca bu kadar emek edip sonunda hasat ettikleri mahsüllerini de ucuza değil tam da ederine satmalarını istiyoruz.Bu amaçlara hizmet etmek üzere sitemizde gönderi paylaşma kısmı ve ürün satış kısmı var. Gönderi paylaşma kısmında her türlü sorunu,tavsiyeyi veya tarım ve kooperatifçilik ile ilgili herhangi bir konuyu tartışabilir ve gerektiği takdirde yardımlaşabilirler. Ürün satış kısmında ise istediği fiyattan ürünlerini koyup aracılar olmadan kolayca alıcı bulabilirler.</p>
+   </div>
+   </div>   	
+   </div>
+  </div>
+ </div>
+</section>
+
+<script>
+$(document).ready(function(){
+	/*****Fixed Menu******/
+	var secondaryNav = $('.cd-secondary-nav'),
+	   secondaryNavTopPosition = secondaryNav.offset().top;
+		$(window).on('scroll', function(){
+			if($(window).scrollTop() > secondaryNavTopPosition ) {
+				secondaryNav.addClass('is-fixed');	
+			} else {
+				secondaryNav.removeClass('is-fixed');
+			}
+		});	
+});
+	</script>
+</body>

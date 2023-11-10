@@ -1,0 +1,372 @@
+/*
+Template Name:agricultural
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+
+
+
+/********************* details_main ****************/
+#details_main{ 
+ background-image: url(../img/79.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ }
+.details_main_3{ 
+ padding-top:150px;
+ padding-bottom:150px;
+ background-color: rgb(31 43 59 / 56%);
+ }
+.details_main_2 ul{ 
+ text-align:right;
+ padding-top:15px;
+ }
+.details_main_2 li{ 
+ display: inline;
+ padding-right: 10px;
+ color: #fff;
+ font-size: 20px;
+ }
+.details_main_2 h2{ 
+ color:#fff;
+ }
+/********************* details_main_end ****************/
+/********************* blog ****************/
+#blog{ 
+ padding-top: 40px;
+ padding-bottom: 35px;
+ background: #fafafa;
+}
+.blog_4{ 
+ padding-left:20px;
+ }
+.blog_4 li{ 
+ display:inline;
+ margin-right:20px;
+ }
+.blog_4 li a{ 
+ color: #474d4b;
+ font-size: 22px;
+ font-weight: bold;
+ letter-spacing:1px;
+ }
+.blog_4 li a:hover{ 
+ color: #b1681f;
+ }
+.well_1{ 
+  float:right;
+  color:#000;
+  font-size:15px;
+  padding-top: 4px;
+ }
+.blog_4 p{ 
+ font-size:17px;
+ padding-top:10px;
+ }
+.blog_5{ 
+ padding-left:20px;
+ }
+.blog_5 li{ 
+ display:inline;
+ margin-right:10px;
+ font-size:18px;
+ color:#000;
+ }
+.well_2{ 
+ font-size:18px!important;
+ color: #a7a7a7!important;
+ }
+.blog_5 li a{ 
+ color: #7b7a7a;
+ }
+.blog_5 li a:hover{ 
+ color: #000;
+ }
+.blog_6{ 
+ padding-left:20px;
+ padding-top:20px;
+ }
+.blog_6 p{ 
+ padding:0px;
+ margin:0px;
+ }
+.blog_6 p a{ 
+ color: #292828;
+ }
+.blog_6 p a:hover{ 
+ color: #999;
+ }
+.blog_2{ 
+ background-color: #fff;
+ padding: 13px 10px 14px 10px;
+ box-shadow: 0 0 1px #c1c0c0;
+ margin-bottom:10px;
+ }
+.blog_7 ul{
+ text-align:center;
+ padding-top:20px;
+}
+.blog_7 li{
+ display:inline;
+ margin-right:10px;
+}
+.well_4{ 
+ background-color:#000; 
+ padding:15px;
+ color:#fff;
+ border-radius: 10px;
+ }
+.well_3 a{ 
+ background-color: #614c37;
+ padding:15px;
+ color:#fff;
+ border-radius: 10px;
+ }
+.well_3 a:hover{ 
+ background-color:#5d3c1b;
+ color:#fff;
+ }
+.blog_8{ 
+ padding-left:30px;
+ }
+#blog .form-control {
+ display: block;
+ width: 100%;
+ height: 50px;
+ padding: 6px 15px;
+ font-size: 14px;
+ line-height: 1.42857143;
+ color: #000;
+ background-color: #fff;
+ background-image: none;
+ border: 1px solid #e2e2e2;
+ border-radius: 0px;
+}
+#blog .btn-danger {
+ color: #0e0e0e;
+ background-color: #ffffff;
+ border-color: #e2e2e2;
+ padding-top: 15px;
+ border-radius: 0px;
+ padding-bottom: 13px;
+}
+#blog .clickable
+{
+cursor: pointer;
+}
+#blog .clickable .glyphicon{
+ background: rgb(119 184 30);
+ display: inline-block;
+ padding: 6px 12px;
+ border-radius: 4px;
+ color: #fff;
+}
+#blog .thumbnail .caption {
+padding: 19px;
+}
+#blog .panel-heading span
+{
+margin-top: -23px;
+font-size: 15px;
+margin-right: -9px;
+}
+#blog .panel-body {
+border-bottom: 1px solid #dedcd7;
+font-size: 16px;
+background-color: #ffffff;
+}
+#blog .panel-body a{
+color:#000;
+}
+#blog .panel-body a:hover{
+color:#C96;
+}
+#blog .panel-primary {
+border: none;
+border-bottom: 1px solid #E1E1E1;
+margin-left: 28px;
+margin-top: 10px;
+}
+#blog .panel-title>a {
+font-size:18px;
+color: #012165;
+}
+#blog .panel-title>a:hover{
+color:#000;
+}
+#blog a.clickable { color: inherit; }
+#blog a.clickable:hover { text-decoration:none; }
+#blog .panel-primary>.panel-heading {
+color: #000;
+background: #f1f1f1;
+border-bottom: #F9F6F1;
+}
+.blog_9 ul{ 
+ text-align:center;
+ margin-bottom:5px;
+ }
+.blog_9 li{ 
+ display:inline;
+ margin-right:3px;
+ }
+.blog_10{ 
+ padding-left:25px;
+ padding-bottom:10px;
+ }
+.well_5{ 
+ background-color: #77b81e;
+ color: #fff;
+ padding: 10px;
+ border-radius: 10px;
+ }
+.well_5:hover{ 
+ background-color: #000;
+ color: #fff;
+ }
+/********************* blog_end ****************/
+/********************* details ****************/
+.details_1 h3{ 
+ padding-top:20px;
+ padding-bottom:10px;
+ color: #000;
+ font-weight:bold;
+ }
+.details_2{ 
+ padding-right:20px;
+ }
+.details_2 img{ 
+ padding-right:20px;
+ }
+.details_3{ 
+ text-align: center;
+ padding: 1px;
+ }
+.details_3 h3{ 
+ padding-top: 10px;
+ padding-bottom: 10px;
+ color: #000;
+ font-weight: bold;
+ letter-spacing: 2px;
+ }
+.details_4 h3{ 
+ padding-top: 10px;
+ padding-bottom: 10px;
+ color: #000;
+ font-weight: bold;
+ letter-spacing: 2px;
+ }
+.details_6 .form-control {
+ display: block;
+ width: 98%!important;
+ height: 50px;
+ padding: 6px 15px;
+ font-size: 14px;
+ line-height: 1.42857143;
+ color: #000;
+ background-color: #fff;
+ background-image: none;
+ border: 1px solid #e2e2e2;
+ border-radius: 0px;
+ margin-bottom:10px;
+}
+.details_7 textarea {
+ height: 155px!important;
+ width: 100%;
+ border: 1px solid #e2e2e2;
+}
+.details_8{ 
+ padding-top:30px;
+ }
+#blog .form-control{
+ font-size: 22px;
+ color: #fff;
+ background-color: #77b81e;
+ border: 1px solid #77b81e;
+}
+#blog .form-control::placeholder{
+ color: #fff;
+}
+/********************* details_end ****************/
+
+
+
+
+
+
+
+@media screen and (max-width : 767px){
+.details_main_3 {
+ padding-top: 50px;
+ padding-bottom: 50px;
+}
+#details_main {
+ background-attachment: inherit;
+ text-align: center;
+}
+.details_main_2 ul {
+ text-align: center;
+}
+#blog {
+ text-align: center;
+}
+.details_1 p{  
+ padding-left:10px;
+ padding-right:10px;
+}
+.details_2 {
+ padding-right: 0px;
+}
+.details_2 img {
+ padding-right: 0px;
+}
+.details_6 .form-control {
+ width: 94%!important;
+ margin-left: 10px;
+}
+#blog .form-control {
+ width: 94%;
+ margin-left: 10px;
+}
+.blog_8 {
+ padding-left: 0px;
+ padding-right: 10px;
+}
+.blog_9 li {
+ display: inline-block;
+ margin-bottom: 10px;
+}
+#blog .panel-primary {
+ margin-left: 0px;
+}
+.blog_10 {
+ padding-left: 0px;
+}
+}
+
+@media (min-width:470px) and (max-width:767px) { 
+
+}
+ 
+@media (min-width:768px) and (max-width:960px) { 
+.blog_9 li {
+ display: inline-block;
+ margin-right: 3px;
+ margin-bottom: 5px;
+}
+} 
+
+ 
+@media (min-width:961px) and (max-width:1200px) {
+.blog_9 li {
+ display: inline-block;
+ margin-right: 3px;
+ margin-bottom: 5px;
+}
+}
+
+@media (min-width:1201px) and (max-width:1320px) {
+
+}
