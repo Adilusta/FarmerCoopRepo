@@ -14,9 +14,13 @@
     <!-- Fontawesome CDN Link -->
 @*     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> *@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*@
+
    </head>
 <body >
-  <div class="container">
+   <div class="containerr">
+    <div class="container">
     <input type="checkbox" id="flip">
     <div class="cover">
       <div class="front">
@@ -40,31 +44,43 @@
             <div class="title">Kayıt ol</div>
           <form method="post">
             <div class="input-boxes">
+
                 <div class="input-box">
                 <i class="fas fa-envelope"></i>
+                <span asp-validation-for="@Model.Name" class="text-danger"></span>
                 <input type="text" asp-for="Name" placeholder="Adınızı giriniz" required>
                 </div>
+
+
                 <div class="input-box">
                 <i class="fas fa-envelope"></i>
+                <span asp-validation-for="@Model.Surname" class="red"></span>
                 <input type="text" asp-for="Surname" placeholder="Soyadınızı giriniz" required>
                 </div>
+
                 <div class="input-box">
                 <i class="fas fa-envelope"></i>
+                 <span asp-validation-for="@Model.Username" class="red"></span>
                 <input type="text" asp-for="Username" placeholder="Kullanıcı adınızı giriniz" required>
                 </div>
+
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
+                 <span asp-validation-for="@Model.Mail" class="red"></span>
                 <input type="text" asp-for="Mail" placeholder="E mailinizi giriniz" required>
               </div>
+
               <div class="input-box">
                 <i class="fas fa-lock"></i>
+                 <span asp-validation-for="@Model.Password" class="red"></span>
                 <input type="password" asp-for="Password" placeholder="Şifrenizi giriniz" required>
               </div>
               @*<div class="input-box">
                 <i class="fas fa-lock"></i>
                 <input type="password" placeholder="Şifrenizi tekrar giriniz" required>
               </div>*@
-             
+             <div class="text-danger" asp-validation-summary="ModelOnly">
+                 </div>
               <div class="button input-box">
                 <input type="submit" value="Kayıt Ol">
               </div>
@@ -76,6 +92,7 @@
       </div>
     </div>
     </div>
+  </div>
   </div>
 </body>
 </html>

@@ -28,6 +28,10 @@ namespace FarmerCoopWebUI.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
+            else
+            {
+                ViewBag.LoginFailedMessage = "Kullanıcı adı veya parola hatalı lütfen tekrar giriniz";
+            }
             return View();
         }
     }

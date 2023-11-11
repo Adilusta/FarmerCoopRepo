@@ -10,12 +10,16 @@
     <meta charset="UTF-8">
     <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
     <link rel="stylesheet" href="~/login2/style12.css">
+     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <!-- Fontawesome CDN Link -->
 @*     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> *@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
    </head>
 <body >
-  <div class="container">
+
+  <div class="containerr">
+      <div class="container">
     <input type="checkbox" id="flip">
     <div class="cover">
       <div class="front">
@@ -51,6 +55,9 @@
                   <div class="button input-box">
                     <input type="submit" value="Giriş Yap">
                   </div>
+                  <div class="text text-danger">
+                      @ViewBag.LoginFailedMessage
+                  </div>
                   <a href="/Register/Index/">
                         <div class="text sign-up-text">Hesabınız yok mu? <label>Kayıt ol.</label></div>
                   </a>
@@ -80,6 +87,7 @@
               <div class="text sign-up-text">Kayıt Ol <label for="flip">Login now</label></div>
             </div>
       </form>*@
+    </div>
     </div>
     </div>
     </div>

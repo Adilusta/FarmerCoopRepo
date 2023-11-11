@@ -15,9 +15,9 @@ body {
 */ padding: 30px;
     background-image: url("/login2/images/farmer1.jpg");
 }
-.container{
+.containerr{
   position: relative;
-  max-width: 850px;
+  max-width: 650px;
   width: 100%;
   background: #fff;
   padding: 40px 30px;
@@ -197,6 +197,9 @@ body {
 .container #flip{
   display: none;
 }
+.red{
+    color: red
+}
 @media (max-width: 730px) {
   .container .cover{
     display: none;
@@ -214,4 +217,5 @@ body {
   .container #flip:checked ~ .forms .login-form{
     display: none;
   }
+    
 }

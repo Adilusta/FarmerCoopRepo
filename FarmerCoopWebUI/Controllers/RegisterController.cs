@@ -22,19 +22,31 @@ namespace FarmerCoopWebUI.Controllers
         [HttpPost]
         public async Task <IActionResult> Index(RegisterDto registerDto)
         {
-            var appUser = new AppUser()
+            if (ModelState.IsValid)
             {
-                Name=registerDto.Name,
-                Surname=registerDto.Surname,
-                Email=registerDto.Mail,
-                UserName=registerDto.Username
-            };
-            var result = await _userManager.CreateAsync(appUser,registerDto.Password);
-            if (result.Succeeded)
-            {
-                return RedirectToAction("Index","Home");
+                var appUser = new AppUser()
+                {
+                    Name = registerDto.Name,
+                    Surname = registerDto.Surname,
+                    Email = registerDto.Mail,
+                    UserName = registerDto.Username
+                };
+                var result = await _userManager.CreateAsync(appUser, registerDto.Password);
+                //BAşarılıysa tekrar bizi index sayfasına atacak
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                //Başarısızsa gelen hataları bize gösterecek
+                else
+                {
+                    foreach (var item in result.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+                }
             }
-            return View();
+            return View(registerDto);
         }
     }
 }
