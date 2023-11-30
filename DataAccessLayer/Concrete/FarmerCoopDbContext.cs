@@ -16,5 +16,6 @@ namespace DataAccessLayer.Concrete
             optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;initial Catalog=FarmerCoopDB; integrated security=true; TrustServerCertificate=true;");
         }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<Post> Posts { get; set; }
     }
 }
