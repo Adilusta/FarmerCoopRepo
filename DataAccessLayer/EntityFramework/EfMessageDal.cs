@@ -11,9 +11,11 @@ using System.Threading.Tasks;
 namespace DataAccessLayer.EntityFramework
 {
     public class EfMessageDal : EfGenericRepository<Message>, IMessageDal
-    {
-        public EfMessageDal(FarmerCoopDbContext context) : base(context)
+	{
+		private readonly FarmerCoopDbContext _context;
+		public EfMessageDal(FarmerCoopDbContext context) : base(context)
         {
+            this._context = context;
         }
     }
 }

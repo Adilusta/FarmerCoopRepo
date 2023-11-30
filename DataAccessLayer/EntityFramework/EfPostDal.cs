@@ -2,6 +2,7 @@
 using DataAccessLayer.Concrete;
 using DataAccessLayer.Repositories;
 using EntityLayer.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,22 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfPostDal : EfGenericRepository<Post>, IPostDal
     {
-        public EfPostDal(FarmerCoopDbContext context) : base(context)
+		private readonly FarmerCoopDbContext _context;
+		public EfPostDal(FarmerCoopDbContext context) : base(context)
         {
+            this._context = context;
         }
-    }
+
+		public List<Post> GetPostListWithAppUser()
+		{
+			var values = _context.Posts.Include(x => x.AppUser).ToList();
+			return values;
+		}
+		public Post GetPostWithAppUserByPostID(int postID)
+		{
+			var value = _context.Posts.Where(x => x.PostID == postID).Include(y => y.AppUser).FirstOrDefault();
+			//var value = _context.Posts.Include(x => x.AppUser).FirstOrDefault();
+			return value;
+		}
+	}
 }

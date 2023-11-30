@@ -12,8 +12,10 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfNotificationDal : EfGenericRepository<Notification>, INotificationDal
     {
-        public EfNotificationDal(FarmerCoopDbContext context) : base(context)
+		private readonly FarmerCoopDbContext _context;
+		public EfNotificationDal(FarmerCoopDbContext context) : base(context)
         {
+            this._context = context;
         }
     }
 }

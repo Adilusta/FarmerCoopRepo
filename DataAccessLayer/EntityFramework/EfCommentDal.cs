@@ -12,8 +12,10 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfCommentDal : EfGenericRepository<Comment>, ICommentDal
     {
+        private readonly FarmerCoopDbContext _context;
         public EfCommentDal(FarmerCoopDbContext context) : base(context)
         {
+            this._context = context;
         }
     }
 }

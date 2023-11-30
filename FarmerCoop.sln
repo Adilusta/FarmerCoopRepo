@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{3599E929-B06C-4871-B21A-06A3F534A43D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{3599E929-B06C-4871-B21A-06A3F534A43D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{FBC0E24B-2773-4809-AD2D-4CF9C4FE7110}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{FBC0E24B-2773-4809-AD2D-4CF9C4FE7110}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{35D3168C-F33A-45B8-9109-F95FC2A30623}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{35D3168C-F33A-45B8-9109-F95FC2A30623}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmerCoopWebUI", "FarmerCoopWebUI\FarmerCoopWebUI.csproj", "{82FBB7AE-3027-4F8F-A6D7-11F960030B09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmerCoopWebUI", "FarmerCoopWebUI\FarmerCoopWebUI.csproj", "{82FBB7AE-3027-4F8F-A6D7-11F960030B09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmerCoopAPI", "FarmerCoopAPI\FarmerCoopAPI.csproj", "{BFF40B50-2039-480A-8284-E12A9D6AF42D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DtoLayer", "DtoLayer\DtoLayer.csproj", "{A86FF97F-6C54-4B05-ADD4-0FF6CC850796}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{82FBB7AE-3027-4F8F-A6D7-11F960030B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82FBB7AE-3027-4F8F-A6D7-11F960030B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82FBB7AE-3027-4F8F-A6D7-11F960030B09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF40B50-2039-480A-8284-E12A9D6AF42D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF40B50-2039-480A-8284-E12A9D6AF42D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF40B50-2039-480A-8284-E12A9D6AF42D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF40B50-2039-480A-8284-E12A9D6AF42D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A86FF97F-6C54-4B05-ADD4-0FF6CC850796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86FF97F-6C54-4B05-ADD4-0FF6CC850796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86FF97F-6C54-4B05-ADD4-0FF6CC850796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A86FF97F-6C54-4B05-ADD4-0FF6CC850796}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -43,10 +43,18 @@ namespace BusinessLayer.Concrete
         {
            _postDal.Insert(entity);
         }
-
-        public void Update(Post entity)
+		public void Update(Post entity)
         {
             _postDal.Update(entity);
         }
-    }
+		public List<Post> TGetPostListWithAppUser()
+		{
+			return _postDal.GetPostListWithAppUser();
+		}
+
+		public Post TGetPostWithAppUserByPostID(int postID)
+		{
+			return _postDal.GetPostWithAppUserByPostID(postID);
+		}
+	}
 }

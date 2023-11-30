@@ -11,9 +11,11 @@ using System.Threading.Tasks;
 namespace DataAccessLayer.EntityFramework
 {
     public class EfProductDal : EfGenericRepository<Product>, IProductDal
-    {
-        public EfProductDal(FarmerCoopDbContext context) : base(context)
+	{
+		private readonly FarmerCoopDbContext _context;
+		public EfProductDal(FarmerCoopDbContext context) : base(context)
         {
+            this._context = context;
         }
     }
 }

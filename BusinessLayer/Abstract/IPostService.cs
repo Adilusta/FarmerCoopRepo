@@ -9,5 +9,7 @@ namespace BusinessLayer.Abstract
 {
     public interface IPostService : IGenericService<Post>
     {
-    }
+		List<Post> TGetPostListWithAppUser();
+		Post TGetPostWithAppUserByPostID(int postID);
+	}
 }

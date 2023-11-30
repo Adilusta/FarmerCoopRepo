@@ -9,5 +9,8 @@ namespace DataAccessLayer.Abstract
 {
     public interface IPostDal : IGenericDal<Post>
     {
-    }
+        List<Post> GetPostListWithAppUser();
+        Post GetPostWithAppUserByPostID(int postID);
+
+	}
 }

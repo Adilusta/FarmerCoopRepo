@@ -12,8 +12,10 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfUserDal : EfGenericRepository<AppUser>, IUserDal
     {
-        public EfUserDal(FarmerCoopDbContext context) : base(context)
+		private readonly FarmerCoopDbContext _context;
+		public EfUserDal(FarmerCoopDbContext context) : base(context)
         {
+            this._context = context;
         }
     }
 }
