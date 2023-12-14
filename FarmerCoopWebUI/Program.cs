@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 // Add services to the container.
+builder.Services.AddHttpClient();
 builder.Services.AddDbContext<FarmerCoopDbContext>();
 builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<FarmerCoopDbContext>();
 builder.Services.AddControllersWithViews();

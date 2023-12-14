@@ -1,0 +1,123 @@
+﻿
+@model List<ResultPostWithAppUserDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BİZİM ÇİFTLİK</title>
+	<link rel="icon" href="img/svg.png" type="image/x-icon">
+    <link href="~/ciftlik_tema/css/bootstrap.min.css" rel="stylesheet">
+	<link href="~/ciftlik_tema/css/global.css" rel="stylesheet">
+	<link href="~/ciftlik_tema/css/blog.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+   <script src="~/ciftlik_tema/js/jquery-2.1.1.min.js"></script>
+    <script src="~/ciftlik_tema/js/bootstrap.min.js"></script>
+  </head>
+<body>
+<section id="blog_main">
+ <div class="blog_main_3 clearfix">
+  <div class="container">
+  <div class="row">
+   <div class="blog_main_1 clearfix">
+    <div class="col-sm-6">
+	 <div class="blog_main_2">
+	  <h2>BLOG</h2>
+	 </div>
+	</div>
+	<div class="col-sm-6">
+	 <div class="blog_main_2">
+	  <ul>
+	       <li>Home</li>
+		   <li>!</li>
+		   <li>Blog</li>
+	  </ul>
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+ </div>
+</section>
+
+<section id="property">
+ <div class="container">
+	 
+				
+			
+  <div class="row">
+	  @foreach (var item in Model)
+			{
+   <!-- <div class="col-sm-8 space_all"> -->
+    <div class="col-sm-9">
+	  <div class="blog_home1">
+		<h2 class="text-center" style="margin-bottom: 10px;">GÖNDERİLER</h2>
+		<div class="blog_home1i clearfix">
+			 <!-- <a href="details.html"><img src="img/meyveler/cilek.jpg" alt="abc" class="img_responsive"></a> -->
+		 <div class="blog_home1ii clearfix">
+			 <h4><a href="/Post/PostDetails/">@item.PostTitle</a></h4>
+			 <ul>
+			  <li><i class="fa fa-user"></i> By <a href="#"> @item.AppUser.Name @item.AppUser.Surname</a></li>
+			  <li><i class="fa fa-comment"></i> <a href="#">0 comment</a></li>
+			  <li><i class="fa fa-calendar"></i> <a href="#">@item.CreateDate</a></li>
+			 </ul>
+			 <p> @item.PostContent <a href="/Post/PostDetails/">Devamını Oku</a></p>
+		 </div>
+		 <!-- <div class="blog_home1il clearfix">
+		   <h6 class="mgt"><span class="date">29</span> <span class="year">Aug</span></h6>	
+		 </div> -->
+	   </div>
+	  </div>
+	  
+	</div>
+	 }	
+   <!-- </div> -->
+   <div class="col-sm-3 space_all">
+	<div style="margin-left: 15px; margin-top: 80px;">
+		<a href="" class="btn btn-primary">Fındık </a>
+		<a href="" class="btn btn-danger" style="margin-left: 5px;">Çilek </a>
+		<a href="" class="btn btn-primary" style="margin-left: 5px;">Üzüm </a>
+		<a href="" class="btn btn-danger" style="margin-left: 5px;">Çilek </a>
+	</div>
+	<br>
+	<div style="margin-left: 15px;">
+
+		<a href="" class="btn btn-primary">Fındık </a>
+		<a href="" class="btn btn-danger" style="margin-left: 5px;">Çilek </a>
+		<a href="" class="btn btn-primary" style="margin-left: 5px;">Üzüm </a>
+		<a href="" class="btn btn-danger" style="margin-left: 5px;">Çilek </a>
+	</div>
+		
+	</div>
+  
+   
+  </div>
+			
+ </div>
+
+   
+</section>
+<script>
+$(document).ready(function(){
+	/*****Fixed Menu******/
+	var secondaryNav = $('.cd-secondary-nav'),
+	   secondaryNavTopPosition = secondaryNav.offset().top;
+		$(window).on('scroll', function(){
+			if($(window).scrollTop() > secondaryNavTopPosition ) {
+				secondaryNav.addClass('is-fixed');	
+			} else {
+				secondaryNav.removeClass('is-fixed');
+			}
+		});	
+});
+	</script>
+
+</body>
+</html>
