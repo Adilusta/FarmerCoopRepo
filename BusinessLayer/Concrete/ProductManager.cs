@@ -39,7 +39,17 @@ namespace BusinessLayer.Concrete
           return _productDal.GetEntityByID(id);
         }
 
-        public void Insert(Product entity)
+		public List<Product> GetProductListWithAppUser()
+		{
+			return _productDal.GetProductListWithAppUser();
+		}
+
+		public Product GetProductWithAppUserByProductID(int productID)
+		{
+		    return _productDal.GetProductWithAppUserByProductID(productID);
+		}
+
+		public void Insert(Product entity)
         {
            _productDal.Insert(entity);
         }
