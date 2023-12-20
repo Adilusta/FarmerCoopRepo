@@ -17,5 +17,6 @@ namespace DataAccessLayer.Concrete
         }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
