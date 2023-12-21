@@ -62,13 +62,13 @@
 		<div class="blog_home1i clearfix">
 			 <!-- <a href="details.html"><img src="img/meyveler/cilek.jpg" alt="abc" class="img_responsive"></a> -->
 		 <div class="blog_home1ii clearfix">
-			 <h4><a href="/Post/PostDetails/">@item.PostTitle</a></h4>
+			 <h4><a href="/Post/PostDetails/@item.PostID/">@item.PostTitle</a></h4>
 			 <ul>
 			  <li><i class="fa fa-user"></i> By <a href="#"> @item.AppUser.Name @item.AppUser.Surname</a></li>
 			  <li><i class="fa fa-comment"></i> <a href="#">0 comment</a></li>
 			  <li><i class="fa fa-calendar"></i> <a href="#">@item.CreateDate</a></li>
 			 </ul>
-			 <p> @item.PostContent <a href="/Post/PostDetails/">Devamını Oku</a></p>
+			 <p> @item.PostContent <a href="/Post/PostDetails/@item.PostID/">Devamını Oku</a></p>
 		 </div>
 		 <!-- <div class="blog_home1il clearfix">
 		   <h6 class="mgt"><span class="date">29</span> <span class="year">Aug</span></h6>	

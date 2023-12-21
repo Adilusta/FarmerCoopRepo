@@ -11,5 +11,6 @@ namespace BusinessLayer.Abstract
     {
 		List<Post> TGetPostListWithAppUser();
 		Post TGetPostWithAppUserByPostID(int postID);
+		Post GetPostWithAppUserAndCommentsByPostID(int postID);
 	}
 }

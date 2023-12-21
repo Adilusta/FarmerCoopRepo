@@ -1,22 +1,18 @@
-﻿using EntityLayer.Abstract;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.Concrete
+namespace DtoLayer.CommentDto
 {
-	public class Comment : IEntity
+	public class ResultCommentDto
 	{
-		[Key]
 		public int CommentID { get; set; }
 		public string CommentUserName { get; set; }
 		public string CommentTitle { get; set; }
 		public string CommentContent { get; set; }
 		public DateTime CommentDate { get; set; }
-		public Post Post { get; set; }
 		public int PostID { get; set; }
 	}
 }

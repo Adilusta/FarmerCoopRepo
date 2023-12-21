@@ -13,6 +13,7 @@ namespace FarmerCoopAPI.Mapping
             CreateMap<Post, UpdatePostDto>().ReverseMap();
             CreateMap<Post, CreatePostDto>().ReverseMap();
             CreateMap<Post, ResultPostWithAppUserDto>().ReverseMap();
+            CreateMap<Post, ResultPostWithAppUserAndCommentsDto>().ReverseMap();
         }
     }
 }

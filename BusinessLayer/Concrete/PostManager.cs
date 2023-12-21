@@ -56,5 +56,10 @@ namespace BusinessLayer.Concrete
 		{
 			return _postDal.GetPostWithAppUserByPostID(postID);
 		}
+
+		public Post GetPostWithAppUserAndCommentsByPostID(int postID)
+		{
+            return _postDal.GetPostWithAppUserAndCommentsByPostID(postID);
+		}
 	}
 }

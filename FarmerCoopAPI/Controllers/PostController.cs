@@ -75,5 +75,13 @@ namespace FarmerCoopAPI.Controllers
 			var values = _mapper.Map<ResultPostWithAppUserDto>(post);
 			return Ok(values);
 		}
+		[HttpGet("PostWithAppUserAndComments/{postID}")]
+		public IActionResult PostWithAppUserAndComments(int postID)
+		{
+			var post = _postService.GetPostWithAppUserAndCommentsByPostID(postID);
+			var values = _mapper.Map<ResultPostWithAppUserAndCommentsDto>(post);
+			return Ok(values);
+			
+		}
 	}
 }

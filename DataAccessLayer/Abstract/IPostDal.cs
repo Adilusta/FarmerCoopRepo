@@ -11,6 +11,7 @@ namespace DataAccessLayer.Abstract
     {
         List<Post> GetPostListWithAppUser();
         Post GetPostWithAppUserByPostID(int postID);
+        Post GetPostWithAppUserAndCommentsByPostID(int postID);
 
 	}
 }

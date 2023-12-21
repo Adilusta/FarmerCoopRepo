@@ -24,8 +24,17 @@ namespace FarmerCoopWebUI.Controllers
 			return View();
 		}
 
-		public IActionResult PostDetails()
+		[HttpGet("/Post/PostDetails/{postID}")]
+		public async Task <IActionResult> PostDetails(int postID)
 		{
+			var client = _httpClientFactory.CreateClient();
+			var responseMessage = await client.GetAsync("https://localhost:7111/api/Post/PostWithAppUserAndComments/"+ postID);
+			if (responseMessage.IsSuccessStatusCode)
+			{
+				var jsonData = await responseMessage.Content.ReadAsStringAsync();
+				var values = JsonConvert.DeserializeObject<ResultPostWithAppUserAndCommentsDto>(jsonData);
+				return View(values);
+			}
 			return View();
 		}
 	}

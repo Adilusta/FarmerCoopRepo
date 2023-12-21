@@ -1,4 +1,4 @@
-﻿
+﻿@model ResultPostWithAppUserAndCommentsDto
 @{
     ViewData["Title"] = "PostDetails";
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
@@ -62,15 +62,8 @@
 	  <img src="~/ciftlik_tema/img/meyveler/cilek.jpg" alt="abc" style="height: 300px; width: 760px;">
 	  <br>
 	  <br>
-	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-		  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-		  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		  
-	 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-		  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-		  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	  <p>@Model.PostContent</p>
+	
 	 </div>
 	 
 	 <div class="details_5">
@@ -183,23 +176,27 @@
 	 </div>
 	 <div class="blog_10">
 	  <h4 class="text-center" style="margin-top: 35px;">YORUMLAR</h4>
-	  
+	  @foreach (var item in Model.Comments)
+							{
+								
+						
 	  <div class="blog_9">
+		 
 		<div class="panel panel-primary">
 			<div class="flex-container">
 				<img src="~/ciftlik_tema/img/meyveler/cilek.jpg" alt="abc" class="circle_img">
-				<p>Feyza Çakmak</p>
+				<p>@item.CommentContent</p>
 				<p class="text-right font-weight-light small">
-					<i class="fa fa-calendar mr-1"></i> 01.12.2023
+					<i class="fa fa-calendar mr-1"></i> @item.CommentDate
 				</p>
 			</div>
 			<div class="yorum">
-				<p>Bu çileğin kilosu kaç paraya ya</p>
+				<p>@item.CommentContent</p>
 			</div>
 			
 		
 		</div>
-		<div class="panel panel-primary">
+	@*	<div class="panel panel-primary">
 			<div class="flex-container">
 				<img src="~/ciftlik_tema/img/meyveler/cilek.jpg" alt="abc" class="circle_img">
 				<p>Feyza Çakmak</p>
@@ -226,8 +223,9 @@
 			</div>
 			
 		
-		</div>
+		</div>*@
 	 </div>
+	 	}
 
 	</div>
    </div>

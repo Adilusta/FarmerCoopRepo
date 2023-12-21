@@ -24,6 +24,13 @@ namespace DataAccessLayer.EntityFramework
 			var values = _context.Posts.Include(x => x.AppUser).ToList();
 			return values;
 		}
+
+		public Post GetPostWithAppUserAndCommentsByPostID(int postID)
+		{
+			var value = _context.Posts.Where(x=> x.PostID==postID).Include(y => y.Comments).Include(z=> z.AppUser).FirstOrDefault();
+			return value;
+		}
+
 		public Post GetPostWithAppUserByPostID(int postID)
 		{
 			var value = _context.Posts.Where(x => x.PostID == postID).Include(y => y.AppUser).FirstOrDefault();

@@ -1,4 +1,5 @@
-﻿
+﻿@model List<ResultProductWithAppUserDto>
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
@@ -57,20 +58,24 @@
   <div class="row">
 
    <div class="shop_1 clearfix">
-
+	   @foreach (var item in Model)
+					{
+						
+					
     <div class="col-sm-3">
 	 <div class="shop_2">
-		<a href="/Product/ProductDetails/"><img src="~/ciftlik_tema/img/meyveler/cilek.jpg" alt="abc" class="img_responsive"></a>	  
+		<a href="/Product/ProductDetails/@item.ProductID/"><img src="@item.ImageURL" alt="abc" class="img_responsive"></a>	  
 	 </div>
 	 <div class="shop_3">
-	 	<h3>ÇİLEK</h3>
+	 	<h3>@item.ProductName</h3>
 		<!-- <a style="text-align: left; font-size: small; color: white;" href="shop-details.html">Ürün Sahibi: Feyza Çakmak</a> -->
-		<p  style="text-align: left; font-size: small; color: white;">Şehir: İstanbul</p>	
+		<p  style="text-align: left; font-size: small; color: white;">Şehir: @item.CityName</p>	
 		<hr class="hr_1">
-		<p class="price">60 TL</p>
+		<p class="price">@item.Price TL</p>
 	 </div>
 	</div>
-	<div class="col-sm-3">
+					}
+	@*<div class="col-sm-3">
 	 <div class="shop_2">
 	  <a href="shop-details.html"><img src="~/ciftlik_tema/img/meyveler/erik.jpg" alt="abc" class="img_responsive"></a>	  
 	 </div>
@@ -105,10 +110,10 @@
 	  <hr class="hr_1">
 	  <p class="price">$20.00</p>
 	 </div>
-	</div>
+	</div>*@
 
-   </div>  @*Birinci Satır*@
-   <div class="shop_1 clearfix">
+   </div> @* Birinci Satır*@
+ @*  <div class="shop_1 clearfix">
     <div class="col-sm-3">
 	 <div class="shop_2">
 		<a href="shop-details.html"><img src="~/ciftlik_tema/img/meyveler/frenk_uzumu.jpg" alt="abc" class="img_responsive"></a>	  
@@ -157,7 +162,7 @@
 	  <p class="price">$20.00</p>
 	 </div>
 	</div>
-   </div>  @*İkinci satır*@
+   </div>  İkinci satır
    <div class="shop_1 clearfix">
     <div class="col-sm-3">
 	 <div class="shop_2">
@@ -207,7 +212,7 @@
 	  <p class="price">20.00 <i class="fa fa-try" aria-hidden="true"></i></p>
 	 </div>
 	</div>
-   </div>  @*Üçüncü satır*@
+   </div>    Üçüncü satır*@
 
    <div class="shop_4">
     <ul>
