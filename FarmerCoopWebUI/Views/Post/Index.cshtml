@@ -53,20 +53,24 @@
 				
 			
   <div class="row">
+
+	  <div class="col-sm-9">
+	  <h2 class="text-center" style="margin-bottom: 10px;">GÖNDERİLER</h2>
+
 	  @foreach (var item in Model)
 			{
    <!-- <div class="col-sm-8 space_all"> -->
-    <div class="col-sm-9">
+    
 	  <div class="blog_home1">
-		<h2 class="text-center" style="margin-bottom: 10px;">GÖNDERİLER</h2>
+		
 		<div class="blog_home1i clearfix">
 			 <!-- <a href="details.html"><img src="img/meyveler/cilek.jpg" alt="abc" class="img_responsive"></a> -->
 		 <div class="blog_home1ii clearfix">
 			 <h4><a href="/Post/PostDetails/@item.PostID/">@item.PostTitle</a></h4>
 			 <ul>
-			  <li><i class="fa fa-user"></i> By <a href="#"> @item.AppUser.Name @item.AppUser.Surname</a></li>
+			  <li><i class="fa fa-user"></i>  <a href="#"> @item.AppUser.Name @item.AppUser.Surname</a></li>
 			  <li><i class="fa fa-comment"></i> <a href="#">0 comment</a></li>
-			  <li><i class="fa fa-calendar"></i> <a href="#">@item.CreateDate</a></li>
+			  <li><i class="fa fa-calendar"></i> <a href="#">@item.CreateDate.ToShortDateString()</a></li>
 			 </ul>
 			 <p> @item.PostContent <a href="/Post/PostDetails/@item.PostID/">Devamını Oku</a></p>
 		 </div>
@@ -76,11 +80,12 @@
 	   </div>
 	  </div>
 	  
-	</div>
-	 }	
-   <!-- </div> -->
-   <div class="col-sm-3 space_all">
-	<div style="margin-left: 15px; margin-top: 80px;">
+	
+	 }
+	 </div>
+
+	    <div class="col-sm-3 space_all">
+	<div style="margin-left: 15px; margin-top:80px;">
 		<a href="" class="btn btn-primary">Fındık </a>
 		<a href="" class="btn btn-danger" style="margin-left: 5px;">Çilek </a>
 		<a href="" class="btn btn-primary" style="margin-left: 5px;">Üzüm </a>
@@ -99,10 +104,12 @@
   
    
   </div>
+   <!-- </div> -->
+
 			
  </div>
 
-   
+ 
 </section>
 <script>
 $(document).ready(function(){

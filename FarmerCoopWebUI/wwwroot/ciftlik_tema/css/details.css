@@ -187,7 +187,6 @@ color:#C96;
 #blog .panel-primary {
 border: none;
 border-bottom: 1px solid #E1E1E1;
-margin-left: 28px;
 margin-top: 10px;
 }
 #blog .panel-title>a {
@@ -243,9 +242,16 @@ border-bottom: #F9F6F1;
  margin-right:3px;
  }
 .blog_10{ 
- padding-left:25px;
+ margin-top:30px;
+ padding-left:5px;
  padding-bottom:10px;
  }
+
+.blog_10 h4{
+    margin-top: 150px;
+    
+}
+
 .well_5{ 
  background-color: #77b81e;
  color: #fff;
@@ -263,7 +269,9 @@ border-bottom: #F9F6F1;
  padding-bottom:10px;
  color: #000;
  font-weight:bold;
+ 
  }
+
 .details_2{ 
  padding-right:20px;
  }
@@ -349,6 +357,7 @@ border-bottom: #F9F6F1;
 .details_1 p{  
  padding-left:10px;
  padding-right:10px;
+
 }
 .details_2 {
  padding-right: 0px;

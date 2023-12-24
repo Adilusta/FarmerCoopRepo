@@ -13,5 +13,9 @@ namespace EntityLayer.Concrete
         public string Name { get; set; }
         public string Surname { get; set; }
         public List<Post> Posts { get; set; }
+
+        //comment i bağla
+        //users tablosuna imageurl ekle ve yorumlar tarafında image tarafında appuser.imageurl olarak çek
+        //wwwroot tarafındaki image klasörünün yolunu ver
     }
 }
