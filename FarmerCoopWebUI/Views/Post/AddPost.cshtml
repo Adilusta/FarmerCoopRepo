@@ -1,0 +1,31 @@
+﻿
+@model CreatePostDto
+@{
+    ViewData["Title"] = "AddPost";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
+<h1>Yeni Blog Girişi</h1>
+<br />
+@using (Html.BeginForm("AddPost","Post",FormMethod.Post))
+{
+
+    @Html.Label("Gönderi Başlığı")
+    @Html.TextBoxFor(x=>x.PostTitle,new{@class ="form-control"})
+    @*@Html.ValidationMessageFor(x=>x.PostTitle)*@
+             <br />
+    @Html.Label("Gönderi Görseli")
+    @Html.TextBoxFor(x=>x.ImageURL,new{@class ="form-control"})
+   @* @Html.ValidationMessageFor(x=>x.BlogThumbnailImage)*@
+    <br />
+        
+    @Html.Label("Gönderi İçeriği")
+    @Html.TextAreaFor(x=>x.PostContent,15,3 ,new{@class ="form-control"})
+  @*  @Html.ValidationMessageFor(x=>x.PostContent)*@
+    <br />
+    <button class="btn btn-info" style= "font-size:medium;"> Gönderiyi Yayınla</button>
+}
+
+
+

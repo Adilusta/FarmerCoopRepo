@@ -21,17 +21,17 @@ namespace BusinessLayer.Concrete
 
         public void Delete(AppUser entity)
         {
-            throw new NotImplementedException();
+            _userDal.Delete(entity);
         }
 
         public List<AppUser> GetAll(Expression<Func<AppUser, bool>> filter = null)
         {
-            throw new NotImplementedException();
-        }
+			return _userDal.GetAll(filter);
+		}
 
         public AppUser GetEntity(Expression<Func<AppUser, bool>> filter)
         {
-            throw new NotImplementedException();
+           return _userDal.GetEntity(filter);
         }
 
         public AppUser GetEntityByID(int id)
@@ -41,7 +41,7 @@ namespace BusinessLayer.Concrete
 
         public void Insert(AppUser entity)
         {
-            throw new NotImplementedException();
+            _userDal.Insert(entity);
         }
 
         public void Update(AppUser entity)

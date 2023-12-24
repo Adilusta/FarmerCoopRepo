@@ -18,5 +18,7 @@ namespace EntityLayer.Concrete
 		public DateTime CommentDate { get; set; }
 		public Post Post { get; set; }
 		public int PostID { get; set; }
+		public AppUser AppUser { get; set; }
+		public int AppUserID { get; set; }
 	}
 }

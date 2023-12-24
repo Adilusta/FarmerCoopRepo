@@ -19,5 +19,6 @@ namespace EntityLayer.Concrete
 		public AppUser AppUser { get; set; }
 		public int AppUserId { get; set; }
 		public List<Comment> Comments { get; set; }
+		public string ImageURL { get; set; }
 	}
 }

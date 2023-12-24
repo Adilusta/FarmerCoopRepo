@@ -36,6 +36,8 @@
 	  <a href="~/farmerTheme/index.html"><i class="fa fa-tree"></i>BİZİM ÇİFTLİK</a>
 	 </div>
 	</div>
+	@if(!(User.Identity.IsAuthenticated))
+	{
 	<div class="col-sm-9 space_all">
 		<div>
 			<div class="header_main_4">
@@ -48,6 +50,18 @@
 			</div>
 		</div>		
 	</div>
+	}
+	@if((User.Identity.IsAuthenticated))
+	{
+	<div class="col-sm-9 space_all">
+		<div>
+			<div class="header_main_4">
+				<header>Hoşgeldin @User.Identity.Name</header>
+			</div>
+		</div>
+	</div>
+	}
+
    </div>
   </div>
  </div>
@@ -68,7 +82,11 @@
         <li><a href="/Product/Index/">Alışveriş</a></li>
 		<li><a href="/Post/Index/">Akış</a></li>
 		<li><a href="/Contact/Index/">İletişim</a></li>
-		
+						@if ((User.Identity.IsAuthenticated))
+						{
+							<li><a href="/Post/AddPost/">Kullanıcı Paneline git</a></li>
+						}
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

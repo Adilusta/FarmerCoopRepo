@@ -1,5 +1,6 @@
 ﻿using EntityLayer.Abstract;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace EntityLayer.Concrete
         public string Name { get; set; }
         public string Surname { get; set; }
         public List<Post> Posts { get; set; }
+        public List<Comment> Comments { get; set; }
+        public string ?ImageURL { get; set; }
 
         //comment i bağla
         //users tablosuna imageurl ekle ve yorumlar tarafında image tarafında appuser.imageurl olarak çek

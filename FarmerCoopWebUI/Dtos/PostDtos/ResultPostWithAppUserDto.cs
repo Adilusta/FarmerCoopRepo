@@ -10,5 +10,6 @@ namespace FarmerCoopWebUI.Dtos.PostDtos
 		public DateTime CreateDate { get; set; }
 		public bool PostStatus { get; set; }
 		public ResultAppUserDto AppUser { get; set; }
+		public string ImageURL { get; set; }
 	}
 }

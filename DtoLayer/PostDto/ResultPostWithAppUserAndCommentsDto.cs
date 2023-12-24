@@ -18,5 +18,6 @@ namespace DtoLayer.PostDto
 		public ResultAppUserDto AppUser { get; set; }
 		public int AppUserId { get; set; }
 		public List<ResultCommentDto> Comments { get; set; }
+		public string ImageURL { get; set; }
 	}
 }
