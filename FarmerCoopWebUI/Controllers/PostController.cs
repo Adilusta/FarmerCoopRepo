@@ -74,5 +74,48 @@ namespace FarmerCoopWebUI.Controllers
 			}
 			return View("Gönderi başarıyla eklendi");
 		}
+
+		[HttpGet]
+		public async Task<IActionResult> PostListByAppUser()
+		{
+			var user = await _userManager.FindByNameAsync(User.Identity.Name);
+			
+			var client = _httpClientFactory.CreateClient();
+			var responseMessage = await client.GetAsync("https://localhost:7111/api/Post/PostListByAppUserID/" + user.Id);
+			if (responseMessage.IsSuccessStatusCode)
+			{
+				var jsonData = await responseMessage.Content.ReadAsStringAsync();
+				var values = JsonConvert.DeserializeObject<List<ResultPostDto>>(jsonData);
+				return View(values);
+			}
+			return View();
+		}
+		[HttpGet("/Post/DeletePost/{postID}")]
+		public async Task<IActionResult> DeletePost(int postID)
+		{
+			var client = _httpClientFactory.CreateClient();
+			var responseMessage = await client.DeleteAsync("https://localhost:7111/api/Post/" + postID);
+			if (responseMessage.IsSuccessStatusCode)
+			{
+				return RedirectToAction("Index");
+			}
+			return RedirectToAction("PostListByAppUser");
+		}
+		//[HttpPost("/Post/PostListByAppUser/{userID}")]
+		//public async Task<IActionResult> PostListByAppUser(int userID)
+		//{
+		//	var user = await _userManager.FindByNameAsync(User.Identity.Name);
+		//	user.Id = userID;
+		//	var client = _httpClientFactory.CreateClient();
+		//	var responseMessage = await client.GetAsync("https://localhost:7111/api/Post/PostListByAppUserID/" + userID);
+		//	if (responseMessage.IsSuccessStatusCode)
+		//	{
+		//		var jsonData = await responseMessage.Content.ReadAsStringAsync();
+		//		var values = JsonConvert.DeserializeObject<List<ResultPostDto>>(jsonData);
+		//		return View(values);
+		//	}
+		//	return View();
+			
+		//}
 	}
 }

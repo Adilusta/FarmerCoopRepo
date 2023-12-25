@@ -37,5 +37,11 @@ namespace DataAccessLayer.EntityFramework
 			//var value = _context.Posts.Include(x => x.AppUser).FirstOrDefault();
 			return value;
 		}
+
+		public List <Post> GetPostListByAppUserID(int userID)
+		{
+			var value = _context.Posts.Where(x => x.AppUserId == userID).ToList();
+			return value;
+		}
 	}
 }

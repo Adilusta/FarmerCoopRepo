@@ -83,5 +83,13 @@ namespace FarmerCoopAPI.Controllers
 			return Ok(values);
 			
 		}
+		[HttpGet("PostListByAppUserID/{userID}")]
+		public IActionResult PostListByAppUserID(int userID)
+		{
+			var post = _postService.GetPostListByAppUserID(userID);
+			var values = _mapper.Map< List<ResultPostDto>>(post);
+			return Ok(values);
+
+		}
 	}
 }
