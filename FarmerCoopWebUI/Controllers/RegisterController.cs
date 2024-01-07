@@ -32,10 +32,10 @@ namespace FarmerCoopWebUI.Controllers
                     UserName = registerDto.Username
                 };
                 var result = await _userManager.CreateAsync(appUser, registerDto.Password);
-                //BAşarılıysa tekrar bizi index sayfasına atacak
+                //BAşarılıysa tekrar bizi giriş sayfasına atacak
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Login");
                 }
                 //Başarısızsa gelen hataları bize gösterecek
                 else

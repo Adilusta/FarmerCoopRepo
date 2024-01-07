@@ -20,6 +20,7 @@ namespace FarmerCoopWebUI.Controllers
 			_httpClientFactory = httpClientFactory;
 			_userManager = userManager;
 		}
+		[HttpGet]
 
 		public async Task <IActionResult> Index()
 		{
@@ -57,9 +58,10 @@ namespace FarmerCoopWebUI.Controllers
 		[HttpPost]
 		public async Task<IActionResult> AddPost(CreatePostDto createPostDto)
 		{
-			var user = await _userManager.FindByNameAsync(User.Identity.Name);
+			 var user = await _userManager.FindByNameAsync(User.Identity.Name);
 			//UserManager _myUserManager = new UserManager(new EfUserDal(new FarmerCoopDbContext()));
 			//var user = _myUserManager.GetEntity(x => x.UserName == User.Identity.Name);
+			
 			
 			createPostDto.AppUserId = user.Id;
 			createPostDto.CreateDate = DateTime.Now;
@@ -70,12 +72,12 @@ namespace FarmerCoopWebUI.Controllers
 			var responseMessage = await client.PostAsync("https://localhost:7111/api/Post/", stringContent);
 			if (responseMessage.IsSuccessStatusCode)
 			{
-				return RedirectToAction("Index");
+				return  RedirectToAction("PostListByAppUser");
 			}
-			return View("Gönderi başarıyla eklendi");
+			return View();
 		}
 
-		[HttpGet]
+		[HttpGet("/Post/PostListByAppUser/")]
 		public async Task<IActionResult> PostListByAppUser()
 		{
 			var user = await _userManager.FindByNameAsync(User.Identity.Name);

@@ -7,7 +7,18 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddHttpClient();
 builder.Services.AddDbContext<FarmerCoopDbContext>();
-builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<FarmerCoopDbContext>();
+//builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<FarmerCoopDbContext>();
+builder.Services.AddIdentity<AppUser, AppRole>(x =>
+{
+
+	//identity kütüphanesinden default olarak gelen zorunluluklarý kaldýrýyorum.
+	x.Password.RequireUppercase = false;
+	x.Password.RequireNonAlphanumeric = false;
+    x.Password.RequireDigit = false;
+    x.Password.RequireLowercase = false;
+    x.Password.RequiredUniqueChars = 0;
+
+}).AddEntityFrameworkStores<FarmerCoopDbContext>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

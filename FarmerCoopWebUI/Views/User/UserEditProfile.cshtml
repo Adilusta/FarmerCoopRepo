@@ -1,0 +1,72 @@
+﻿
+@model UpdateAppUserDto
+@{
+    ViewData["Title"] = "UserEditProfile";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">Yazar Profil Bilgileri Düzenleme</h4>
+                        <br>
+                    
+                        <p class="card-description"> Bu sayfadan bilgilerinizi düzenleyebilirsiniz. </p>
+                       
+                        <form class="forms-sample" method="post">
+                            <div class="form-group">
+                                <label for="exampleInputName1">Kullanıcı adı</label>
+                                <input type="text" asp-for="@Model.UserName" class="form-control"/>
+                            </div>
+
+                             <div class="form-group">
+                                <label for="exampleInputEmail3">İsim</label>
+                                <input type="text" asp-for="@Model.Name" class="form-control"/>
+                             </div>
+
+                             <div class="form-group">
+                                <label for="exampleInputEmail3">Soyisim</label>
+                                <input type="text" asp-for="@Model.Surname" class="form-control"/>
+                          
+                             </div>
+
+                          <div class="form-group">
+                                <label for="exampleInputEmail3">Mail adresi</label>
+                                <input type="text" asp-for="@Model.Email" class="form-control"/>
+                          </div>
+                            
+                          <div class="form-group">
+                                <label for="exampleInputEmail3">Telefon Numarası</label>
+                                <input type="text" asp-for="@Model.PhoneNumber" class="form-control"/>
+                          </div>
+                          
+                           <div class="form-group">
+                            <label for="exampleInputEmail3">Yeni Şifreniz</label>
+                              <input type="text" asp-for="@Model.Password" class="form-control"/>
+                          </div>
+
+                           <div class="form-group">
+                                <label for="exampleInputEmail3">Resim URL</label>
+                                <input type="text" asp-for="@Model.ImageURL" class="form-control"/>
+                          </div>
+
+                         @* <div class="form-group">
+                            <label>Kullanıcı Görsel</label>
+                            <input type="file" name="img[]" class="file-upload-default">
+                            <div class="input-group col-xs-12">
+                              <input type="text" class="form-control file-upload-info" disabled placeholder="Lütfen bir fotoğraf seçiniz...">
+                              <span class="input-group-append">
+                                <button class="file-upload-browse btn btn-gradient-primary" type="button">Fotoğraf Seç</button>
+                              </span>
+                            </div>
+                          </div>*@
+
+                          <div class="form-group">
+                          
+                          </div>
+                          <button type="submit" class="btn btn-gradient-primary mr-2">Güncelle</button>
+                          <button asp-action="Index" asp-controller="Dashboard" class="btn btn-light">İptal Et</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
