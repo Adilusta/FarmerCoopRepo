@@ -19,7 +19,7 @@ builder.Services.AddIdentity<AppUser, AppRole>(x =>
     x.Password.RequiredUniqueChars = 0;
 
 }).AddEntityFrameworkStores<FarmerCoopDbContext>();
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
 var app = builder.Build();
 

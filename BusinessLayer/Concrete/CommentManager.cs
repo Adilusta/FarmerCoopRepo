@@ -46,5 +46,10 @@ namespace BusinessLayer.Concrete
         {
             return _commentDal.GetEntityByID(id);
         }
-    }
+
+		public List<Comment> GetCommentListByAppUser(int userID)
+		{
+			return _commentDal.GetCommentListByAppUser(userID);
+		}
+	}
 }

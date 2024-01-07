@@ -1,0 +1,30 @@
+﻿@model List<GetCommentByAppUserDto>
+@{
+    ViewData["Title"] = "CommentListByAppUser";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1>Yorumlarım</h1>
+
+<table class="table table-bordered"> 
+    <tr>
+        <th>#</th>
+        <th>Yorum başlığı</th>
+        <th>Yorum içeriği</th>
+        <th>Tarih</th>
+        <th>Yorum yapılan gönderinin adı</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td> @item.CommentID</td>
+            <td> @item.CommentTitle</td>
+            <td> @item.CommentContent</td>
+            <td> @item.CommentDate.ToShortDateString()</td>
+            <td> @item.Post.PostTitle</td>
+        </tr>
+    }
+</table>
+
+

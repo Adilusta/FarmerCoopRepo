@@ -12,6 +12,7 @@ namespace FarmerCoopAPI.Mapping
 			CreateMap<Comment, GetCommentDto>().ReverseMap();
 			CreateMap<Comment, UpdateCommentDto>().ReverseMap();
 			CreateMap<Comment, CreateCommentDto>().ReverseMap();
+			CreateMap<Comment, GetCommentByAppUserDto>().ReverseMap();
 		}
 
     }
