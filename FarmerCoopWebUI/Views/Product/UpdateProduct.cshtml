@@ -1,0 +1,66 @@
+﻿
+@model UpdateProductDto
+@{
+    ViewData["Title"] = "UpdateProduct";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Ürün Güncelleme Sayfası</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Ürün Güncelleme Sayfası</div>
+                        </div>
+                        <input type="hidden" asp-for="ProductID" />
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="productname">Ürünün ismi</label>
+                                <input type="text" class="form-control" asp-for="ProductName" id="productname">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="price">Ürünün Açıklaması</label>
+                                <textarea class="form-control" asp-for="Description" rows="7"> </textarea>
+                               @* <input type="text" class="form-control" asp-for="PostContent" id="content">*@
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="productname">Fiyat </label>
+                                <input type="text" class="form-control" asp-for="Price" id="price">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="productname">Şehir </label>
+                                <input type="text" class="form-control" asp-for="CityName" id="city">
+                            </div>
+                        </div>
+                         <div class="card-body">
+                            <div class="form-group">
+                                <label for="productname">Telefon Numarası </label>
+                                <input type="text" class="form-control" asp-for="PhoneNumber" id="phone">
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="imageurl">Ürün Görselini Giriniz</label>
+                                <input type="text" class="form-control" asp-for="ImageURL" id="imageurl">
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <button class="btn btn-primary">Ürünü Güncelle</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
