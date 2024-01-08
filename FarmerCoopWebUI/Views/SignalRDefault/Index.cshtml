@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <script type="text/javascript"> 
+                            $(document).ready(()=>{
+                                var connection= new signalR.HubConnectionBuilder().withUrl("https://localhost:7111/SignalRHub").build();
+                                $("#connstatus").text(connection.state);
+                                //bağlandıktan sonra bağlantının durumunu yaz.Hata oluşursa da yaz.
+                                connection.start().then(()=>{
+                                    $("#connstatus").text(connection.state);
+                                    connection.invoke("SendPostCount");
+                                }).catch((err)=>{
+                                    console.log(err)
+                                });
+                                
+
+                                connection.on("ReceivePostCount",(value)=>{
+                                    $("#postcount").text(value);
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <div class="alert alert-success">
+            Bağlantının durumu : <strong id="connstatus"></strong>
+        </div>
+        <div class="alert alert-info">
+            Kategori sayısı : <strong id="postcount"></strong>
+        </div>
+    </div>
+</div>

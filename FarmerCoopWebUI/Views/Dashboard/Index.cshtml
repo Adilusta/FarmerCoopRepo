@@ -1,0 +1,208 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+         <script src="~/lib/jquery/dist/jquery.min.js"></script>
+         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+         <script src="~/js/site.js" asp-append-version="true"></script>
+         <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+
+            <div class="page-header">
+              <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                  <i class="mdi mdi-home"></i>
+                </span> Dashboard
+              </h3>
+              <nav aria-label="breadcrumb">
+                <ul class="breadcrumb">
+                
+                </ul>
+              </nav>
+            </div>
+            <div class="row">
+
+                @*<script type="text/javascript"> 
+                            $(document).ready(()=>{
+                                var connection= new signalR.HubConnectionBuilder().withUrl("https://localhost:7111/SignalRHub").build();
+                                $("#connstatus").text(connection.state);
+                                //bağlandıktan sonra bağlantının durumunu yaz.Hata oluşursa da yaz.
+                                connection.start().then(()=>{
+                                    $("#connstatus").text(connection.state);
+                                    connection.invoke("SendPostCount");
+                                }).catch((err)=>{
+                                    console.log(err)
+                                });
+                                
+
+                                connection.on("ReceivePostCount",(value)=>{
+                                    $("#postcount").text(value);
+                                });
+                            });
+                        </script>*@
+
+                          <script type="text/javascript"> 
+                            $(document).ready(()=>{
+                                var connection= new signalR.HubConnectionBuilder().withUrl("https://localhost:7111/SignalRHub").build();
+                                $("#connstatus").text(connection.state);
+                                 var userId =@ViewBag.userId;
+                                //bağlandıktan sonra bağlantının durumunu yaz.Hata oluşursa da yaz.
+                                connection.start().then(()=>{
+                                    $("#connstatus").text(connection.state);
+                                    setInterval(()=>{
+                                           connection.invoke("SendPostCount");
+                                           connection.invoke("SendPostCountByAppUser",userId);
+                                           connection.invoke("SendUserCount");
+                                           connection.invoke("SendCommentCount");
+                                           connection.invoke("SendCommentCountByAppUser",userId);
+                                           connection.invoke("SendProductCount");
+                                           connection.invoke("SendProductCountByAppUser",userId);
+                                    },1000);
+                                 
+                                }).catch((err)=>{
+                                    console.log(err)
+                                });
+                                
+
+                                connection.on("ReceivePostCount",(value)=>{
+                                    $("#postcount").text(value);
+                                });
+                                 connection.on("ReceivePostCountByAppUser",(value)=>{
+                                    $("#postcountbyappuser").text(value);
+                                });
+                                 connection.on("ReceiveUserCount",(value)=>{
+                                    $("#usercount").text(value);
+                                });
+                                  connection.on("ReceiveCommentCount",(value)=>{
+                                    $("#commentcount").text(value);
+                                });
+                                 connection.on("ReceiveCommentCountByAppUser",(value)=>{
+                                    $("#commentcountbyappuser").text(value);
+                                });
+                                 connection.on("ReceiveProductCount",(value)=>{
+                                    $("#productcount").text(value);
+                                });
+                                  connection.on("ReceiveProductCountByAppUser",(value)=>{
+                                    $("#productcountbyappuser").text(value);
+                                });
+
+
+
+                            });
+                        </script>
+
+               @* toplam gönderi sayısı*@
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-danger card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="~/UserTheme/assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">Toplam Gönderi Sayısı <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5" id="postcount"></h2>
+                    <h6 class="card-text"> Bizim Çiftlik Projesi</h6>
+                  </div>
+                </div>
+              </div>
+              
+                @*sizin gönderi sayınız*@
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-info card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="~/UserTheme/assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">Sizin Gönderi Sayınız <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5" id="postcountbyappuser"> </h2>
+                    <h6 class="card-text"> Bizim Çiftlik Projesi</h6>
+                  </div>
+                </div>
+              </div>
+              
+              @*toplam kullanıcı sayısı*@
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-success card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="~/UserTheme/assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3"> Toplam Kullanıcı sayısı <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5" id="usercount"></h2>
+                    <h6 class="card-text">Bizim Çiftlik Projesi</h6>
+                  </div>
+                </div>
+              </div>
+
+             @* toplam yorum sayısı*@
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-danger card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="~/UserTheme/assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">Toplam Yorum Sayısı <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5" id="commentcount"></h2>
+                    <h6 class="card-text"> Bizim Çiftlik Projesi</h6>
+                  </div>
+                </div>
+              </div>
+
+             @* sizin toplam yorum sayınız*@
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-info card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="~/UserTheme/assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">Sizin Toplam Yorum Sayınız <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5" id="commentcountbyappuser"></h2>
+                    <h6 class="card-text"> Bizim Çiftlik Projesi</h6>
+                  </div>
+                </div>
+              </div>
+
+              @*Toplam ürün sayısı*@
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-success card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="~/UserTheme/assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3"> Toplam ürün sayısı <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5" id="productcount"></h2>
+                    <h6 class="card-text">Bizim Çiftlik Projesi</h6>
+                  </div>
+                </div>
+              </div>
+
+            @*  sizin toplam ürün sayınız*@
+               <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-success card-img-holder text-white">
+                  <div class="card-body">
+                    <img src="~/UserTheme/assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3"> Sizin toplam ürün sayınız <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5" id="productcountbyappuser"></h2>
+                    <h6 class="card-text">Bizim Çiftlik Projesi</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+           @* @await Component.InvokeAsync("BlogListDashboard")*@
+
+       
+     @*   @await Component.InvokeAsync("WriterAboutOnDashboard")*@
+
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+      
+          <!-- partial -->
+    
+        <!-- main-panel ends -->
+      
+      <!-- page-body-wrapper ends -->
+    
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+  
+
+</html>
+
