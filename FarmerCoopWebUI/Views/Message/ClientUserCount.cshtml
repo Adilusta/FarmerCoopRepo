@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "ClientUserCount";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+  
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class="container">
+
+
+            <script type="text/javascript">
+
+                $(document).ready(() => {
+
+                    var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:7111/SignalRHub").build();
+                    $("#connstatus").text(connection.state);
+                    connection.start().then(() => {
+                        $("#connstatus").text(connection.state);
+                    }).catch((err) => { console.log(err) });
+
+
+                    connection.on("ReceiveClientCount", (clientCount) => {
+                        $("#clientCountValue").text(clientCount);
+                    });
+
+                });
+
+            </script>
+
+            <h4 class="page-title">Anlık Client Sayısı: <strong id="clientCountValue"></strong></h4>
+
+          
+
+        </div>
+    </body>
+</html>
+

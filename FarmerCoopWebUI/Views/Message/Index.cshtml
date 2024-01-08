@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+     Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
+ @*<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>*@
+
+    @*<script src="~/js/chat.js"></script>*@
+@*<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.8/signalr.min.js"></script>*@
+<html>
+       
+   
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/microsoft/signalr/dist/browser/signalr.min.js"></script>
+ @*<script src="~/js/chat.js"></script>*@
+ 
+
+<head>
+     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FarmerCoopWebUI.styles.css" asp-append-version="true" />
+
+</head>
+
+<body>
+     @*<script type="text/javascript">
+
+                $(document).ready(() => {
+
+                    var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:7111/SignalRHub").build();
+                    $("#connstatus").text(connection.state);
+                    connection.start().then(() => {
+                        $("#connstatus").text(connection.state);
+                    }).catch((err) => { console.log(err) });
+
+
+                    connection.on("ReceiveClientCount", (clientCount) => {
+                        $("#clientCountValue").text(clientCount);
+                    });
+
+                });
+
+            </script>*@
+    
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text-center mb-4">Bizim Çiftlik Anlık Mesajlaşma</h3>
+                    </div>
+                </div>
+
+
+                <div class="row p-1">
+                    <div class="col-2">Kullanıcı Adınız:</div>
+                    <div class="col-5">
+                        <input type="text" id="userinput" class="form-control" value="@User.Identity.Name" />
+                    </div>
+                </div>
+
+
+                <div class="row p-1">
+                    <div class="col-2">Mesajınız:</div>
+                    <div class="col-5">
+                        <input type="text" class="form-control" id="messageinput"/>
+                    </div>
+                </div>
+
+
+                <div class="row p-1">
+                    <div class="col-2"></div>
+                    <div class="col-3">
+                        <input type="button" id="sendbutton" value="Mesaj Gönder" class="btn btn-warning" />
+                    </div>
+                </div>
+
+
+                <div class="row p-1">
+                    <div class="col-12">
+                        <hr />
+                    </div>
+                </div>
+
+
+                <div class="row p-1">
+                    <div class="col-12">
+                        <ul id="messagelist" class="list-group"></ul>
+                    </div>
+                </div>
+            </div>
+            <br />
+             <div class="row">
+                 <div class="col-5">
+                     <h4 class="page-title">Anlık Client Sayısı:  <a href="/Message/ClientUserCount/" class="btn btn-primary">Gör</a></h4>
+                 </div>
+                   
+             </div>
+          
+           
+           
+
+             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.8/signalr.min.js"></script>
+    <script src="~/js/chat.js"></script>
+</body>
+@*<script src="~/js/chat.js"></script>*@
+@*<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>*@
+
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+    @*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
+    @*<script src="~/js/site.js" asp-append-version="true"></script>*@
+   @* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>*@
+    
+   @* <script src="~/js/chat.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.8/signalr.min.js"></script>*@
+     
+ </html>

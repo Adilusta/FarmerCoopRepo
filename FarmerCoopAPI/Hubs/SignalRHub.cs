@@ -11,6 +11,7 @@ namespace FarmerCoopAPI.Hubs
 		{
 			_context = context;
 		}
+		public static int clientCount { get; set; } = 0;
 		public async Task SendPostCount()
 		{
 			var value = _context.Posts.Count();
@@ -45,6 +46,22 @@ namespace FarmerCoopAPI.Hubs
 		{
 			var value = _context.Products.Where(x => x.AppUserId == userId).Count();
 			await Clients.All.SendAsync("ReceiveProductCountByAppUser", value);
+		}
+		public async Task SendMessage(string user, string message)
+		{
+			await Clients.All.SendAsync("ReceiveMessage", user, message);
+		}
+		public override async Task OnConnectedAsync()
+		{
+			clientCount++;
+			await Clients.All.SendAsync("ReceiveClientCount", clientCount);
+			await base.OnConnectedAsync();
+		}
+		public override async Task OnDisconnectedAsync(Exception? exception)
+		{
+			clientCount--;
+			await Clients.All.SendAsync("ReceiveClientCount", clientCount);
+			await base.OnDisconnectedAsync(exception);
 		}
 	}
 }
