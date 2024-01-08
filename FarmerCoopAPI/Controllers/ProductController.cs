@@ -72,5 +72,12 @@ namespace FarmerCoopAPI.Controllers
 			var values = _mapper.Map<ResultProductWithAppUserDto>(product);
 			return Ok(values);
 		}
+		[HttpGet("ProductListByAppUser/{userID}")]
+		public IActionResult ProductListByAppUser(int userID)
+		{
+			var product = _productService.GetProductListByAppUser(userID);
+			var values = _mapper.Map<List<ResultProductDto>>(product);
+			return Ok(values);
+		}
 	}
 }

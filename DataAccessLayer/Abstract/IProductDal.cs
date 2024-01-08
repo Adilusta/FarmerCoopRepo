@@ -11,6 +11,7 @@ namespace DataAccessLayer.Abstract
 	{
 		List<Product> GetProductListWithAppUser();
 		Product GetProductWithAppUserByProductID(int productID);
+		List<Product> GetProductListByAppUser(int userID);
 
 	}
 }

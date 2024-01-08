@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IProductService : IGenericService<Product>
-    {
-		 List<Product> GetProductListWithAppUser();
-		 Product GetProductWithAppUserByProductID(int productID);
+	public interface IProductService : IGenericService<Product>
+	{
+		List<Product> GetProductListWithAppUser();
+		Product GetProductWithAppUserByProductID(int productID);
+		List<Product> GetProductListByAppUser(int userID);
 
 	}
 }

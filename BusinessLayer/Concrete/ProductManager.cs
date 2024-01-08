@@ -39,6 +39,11 @@ namespace BusinessLayer.Concrete
           return _productDal.GetEntityByID(id);
         }
 
+		public List<Product> GetProductListByAppUser(int userID)
+		{
+            return _productDal.GetProductListByAppUser(userID);
+		}
+
 		public List<Product> GetProductListWithAppUser()
 		{
 			return _productDal.GetProductListWithAppUser();

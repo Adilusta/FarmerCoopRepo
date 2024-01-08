@@ -18,6 +18,13 @@ namespace DataAccessLayer.EntityFramework
         {
             this._context = context;
         }
+
+		public List<Product> GetProductListByAppUser(int userID)
+		{
+			var values = _context.Products.Where(x => x.AppUserId == userID).ToList();
+			return values;
+		}
+
 		public List<Product> GetProductListWithAppUser()
 		{
 			var values = _context.Products.Include(x => x.AppUser).ToList();

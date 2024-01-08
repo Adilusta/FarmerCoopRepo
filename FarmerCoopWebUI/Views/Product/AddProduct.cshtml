@@ -1,0 +1,38 @@
+﻿
+
+@model UpdateProductDto
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1>Yeni Ürün Girişi</h1>
+<br />
+@using (Html.BeginForm("AddProduct","Product",FormMethod.Post))
+{
+
+    @Html.Label("Ürün İsmi")
+    @Html.TextBoxFor(x=>x.ProductName,new{@class ="form-control"})
+    @*@Html.ValidationMessageFor(x=>x.PostTitle)*@
+             <br />
+    @Html.Label("Ürün Açıklaması")
+    @Html.TextAreaFor(x=>x.Description,8,3 ,new{@class ="form-control"})
+     <br />
+    @Html.Label("Ürünün fiyatı")
+    @Html.TextBoxFor(x=>x.Price,new{@class ="form-control"})
+    @*@Html.ValidationMessageFor(x=>x.PostTitle)*@
+             <br />
+    @Html.Label("Ürün Görseli")
+    @Html.TextBoxFor(x=>x.ImageURL,new{@class ="form-control"})
+   @* @Html.ValidationMessageFor(x=>x.BlogThumbnailImage)*@
+    <br />
+    @Html.Label("Şehir")
+    @Html.TextBoxFor(x=>x.CityName,new{@class ="form-control"})
+     <br />
+    @Html.Label("Telefon Numarası")
+    @Html.TextBoxFor(x=>x.PhoneNumber,new{@class ="form-control"})
+    @*@Html.ValidationMessageFor(x=>x.PostContent)*@
+    <br />
+    <button class="btn btn-info" style= "font-size:medium;"> Ürünü Yayınla</button>
+}
+

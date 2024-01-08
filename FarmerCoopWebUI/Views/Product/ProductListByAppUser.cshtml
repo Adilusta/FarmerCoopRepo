@@ -1,0 +1,59 @@
+﻿
+@model List<ResultProductDto>
+@{
+    ViewData["Title"] = "ProductListByAppUser";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1>Ürünleriniz</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ürün Adı</th>
+        <th>Ürün Açıklaması</th>
+        <th>Şehir</th>
+        <th>Fiyat</th>
+        <th>Stok Durumu</th>
+        <th>Telefon Numarası</th>
+        <th>Sil</th>
+        <th>Düzenle</th>
+    </tr>
+    @foreach (var item in Model)
+   {
+       <tr>
+           <th>@item.ProductID</th>
+           <td>@item.ProductName</td>
+           <td>@item.Description</td>
+           <td>@item.CityName</td>
+           <td>@item.Price</td>
+            <td>
+
+         
+           @if (item.StockStatus )
+            {
+            <span class="badge badge-success">Stokta Var</span>
+            }
+            @if (!item.StockStatus)
+            {
+            <span class="badge badge-secondary">Stokta Yok</span>
+            }
+                 </td>
+           <td>@item.PhoneNumber</td>
+             
+           <td> 
+                       <a href="/Product/DeleteProduct/@item.ProductID/"class="btn btn-danger"
+                   onclick="return confirm('Silmek istediğine emin misin?');" >  Sil </a>     
+           
+                 
+           </td>
+                
+           <td> 
+               <a href="/Product/UpdateProduct/@item.ProductID/" class="btn btn-warning"> Düzenle </a> 
+               </td>
+
+             
+       </tr>
+   }
+</table>
+<a href="/Product/AddProduct/" class="btn btn-primary"> Yeni Ürün Oluştur </a>
+
